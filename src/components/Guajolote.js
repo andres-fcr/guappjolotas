@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import { urlGuajolota } from '../helpers/Url';
+import { Foto } from '../styles/GuajolotesStyles';
 
 
 
@@ -36,8 +37,8 @@ export default class Guajolote extends Component {
         return <div>
             {
                 state.map(product => (
-                    <Card>
-                    <Card.Img variant="top" src={product.imagen} />
+                    <Card key={product.id}>
+                    <Foto variant="top" src={product.imagen} />
                     <Card.Body>
                         <Card.Title>{product.product}</Card.Title>
                         <Card.Text>
