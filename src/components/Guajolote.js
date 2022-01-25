@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
-import { urlGuajolota } from '../helpers/Url';
+import {  urlGuajolota } from '../helpers/Url';
 import { Foto } from '../styles/GuajolotesStyles';
 
 
@@ -9,9 +9,10 @@ export default class Guajolote extends Component {
 
     constructor() {
 
-        super()
+        super();
         this.state = {
             productos: []
+            
         }
     }
     componentDidMount() {
@@ -21,11 +22,7 @@ export default class Guajolote extends Component {
     async getData() {
         const respuesta = await fetch(urlGuajolota)
         const data = await respuesta.json()
-
-        this.setState({
-            productos: data
-        })
-
+        this.setState({productos: data})
         console.log(data)
 
     }
@@ -52,4 +49,6 @@ export default class Guajolote extends Component {
 
         </div>
     }
+
+    
 }

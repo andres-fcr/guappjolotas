@@ -1,9 +1,9 @@
-import Prueba from "../components/Guajolote";
+import Guajolote from "../components/Guajolote";
 
 function App() {
   return (
     <div className="App">
-      <Prueba/> 
+      <Guajolote/> 
     </div>
   );
 }

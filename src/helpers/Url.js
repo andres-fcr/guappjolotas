@@ -1,1 +1,2 @@
-export const urlGuajolota ="https://guajolotasapk.herokuapp.com/guajolotas"
+export const urlGuajolota ="https://guappjolota.herokuapp.com/Productos/";
+
