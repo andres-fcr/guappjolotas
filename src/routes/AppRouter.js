@@ -11,6 +11,7 @@ export default class AppRouter extends Component {
         <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="*" element={<Navigate to ="/"/>}/>
+            
         </Routes>
         </BrowserRouter>
     ) 
