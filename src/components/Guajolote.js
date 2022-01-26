@@ -46,7 +46,7 @@ export default class Guajolote extends Component {
                 ) )
                 
             };
-
+            <Contador/>
         </div>
     }
 
