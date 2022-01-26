@@ -4,6 +4,10 @@ import { Button } from 'react-bootstrap';
 const Counter = () => {
     const [counter, setCounter] = useState(0);
 
+    // if (counter === 0) {
+    //     alert('ño')
+    // } handleSubstract()
+
     const handleSubstract = () => {
         setCounter(counter - 1)
     }
@@ -11,23 +15,23 @@ const Counter = () => {
     const handleAdd = () => {
         setCounter(counter + 1)
     }
-return (
-  
-      <div>
-         
-        <div className="mb-2">
-      <Button variant="primary" onClick={handleSubstract}>
-        -
-      </Button>{' '} 
-      
-      <h1>{counter}</h1>
-      
-      <Button variant="secondary" onClick={handleAdd} >
-        +
-      </Button>
-     </div>
-      </div>
+    return (
+
+        <div>
+
+            <div className="mb-2">
+                <Button variant="primary" onClick={handleSubstract}>
+                    -
+                </Button>{' '}
+
+                <h1>{counter}</h1>
+
+                <Button variant="secondary" onClick={handleAdd} >
+                    +
+                </Button>
+            </div>
+        </div>
     );
-  }
-  
-  export default Counter;
+}
+
+export default Counter;
