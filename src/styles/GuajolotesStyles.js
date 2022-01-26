@@ -33,6 +33,23 @@ export const TProducto = styled(Card.Title)`
 font-size: 14px;
 line-height: 21px;
 `
-export const ConjuntoTexto =styled.div`
-padding-right:20px
+export const Ul = styled.ul`
+display: flex;
+align-items: center;
+justify-content: center;
 `
+
+export const ConjuntoTexto = styled.div`
+padding-right:20px;
+`
+
+export const Li = styled.li`
+list-style:none;
+margin-right:30px;
+`
+export const Head = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+`
+

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import { urlGuajolota } from '../helpers/Url';
-import { Foto, ListProducto, Precio, Producto, TProducto } from '../styles/GuajolotesStyles';
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/GuajolotesStyles';
+import Login from './Login';
 
 
 export default class Guajolote extends Component {
@@ -31,11 +32,17 @@ export default class Guajolote extends Component {
         const state = this.state.productos
 
         return <div>
-            <ListProducto>
-                <Producto>Guajolotas</Producto>
-                <Producto>Bebidas</Producto>
-                <Producto>Tamales</Producto>
-            </ListProducto>
+            <Head>
+            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
+            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
+            <h1>Nada como una Guajolota para empezar el dia</h1>
+            <input type="text" />
+            </Head>
+            <Ul class="row">
+                <Li><a href="">Guajolotas</a></Li>
+                <Li><a href="">Bebidas</a></Li>
+                <Li><a href="">Tamales</a></Li>
+            </Ul>
             <ListProducto>
                 {
                     state.map(product => (
