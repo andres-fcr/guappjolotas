@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import {  urlGuajolota } from '../helpers/Url';
 import { Foto } from '../styles/GuajolotesStyles';
-
+import Counter from './Contador';
+import Home from './Home'
 
 
 export default class Guajolote extends Component {
@@ -32,8 +33,10 @@ export default class Guajolote extends Component {
         const state = this.state.productos
 
         return <div>
+            <Home/>
             {
                 state.map(product => (
+                
                     <Card key={product.id}>
                     <Foto variant="top" src={product.imagen} />
                     <Card.Body>
@@ -42,11 +45,10 @@ export default class Guajolote extends Component {
                             {product.precio}
                         </Card.Text>
                     </Card.Body>
+                    <Counter key={product.id}/>
                 </Card>
-                ) )
-                
+                )) 
             };
-            <Contador/>
         </div>
     }
 
