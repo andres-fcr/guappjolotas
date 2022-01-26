@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
-import {  urlGuajolota } from '../helpers/Url';
-import { Foto } from '../styles/GuajolotesStyles';
-import Counter from './Contador';
-import Home from './Home'
+import { urlGuajolota } from '../helpers/Url';
+import { Foto, ListProducto, Precio, Producto, TProducto } from '../styles/GuajolotesStyles';
 
 
 export default class Guajolote extends Component {
@@ -13,7 +11,7 @@ export default class Guajolote extends Component {
         super();
         this.state = {
             productos: []
-            
+
         }
     }
     componentDidMount() {
@@ -23,7 +21,7 @@ export default class Guajolote extends Component {
     async getData() {
         const respuesta = await fetch(urlGuajolota)
         const data = await respuesta.json()
-        this.setState({productos: data})
+        this.setState({ productos: data })
         console.log(data)
 
     }
@@ -33,24 +31,38 @@ export default class Guajolote extends Component {
         const state = this.state.productos
 
         return <div>
-            <Home/>
-            {
-                state.map(product => (
-                
-                    <Card key={product.id}>
-                    <Foto variant="top" src={product.imagen} />
-                    <Card.Body>
-                        <Card.Title>{product.product}</Card.Title>
-                        <Card.Text>
-                            {product.precio}
-                        </Card.Text>
-                    </Card.Body>
-                    <Counter key={product.id}/>
-                </Card>
-                )) 
-            };
-        </div>
+            <ListProducto>
+                <Producto>Guajolotas</Producto>
+                <Producto>Bebidas</Producto>
+                <Producto>Tamales</Producto>
+            </ListProducto>
+            <ListProducto>
+                {
+                    state.map(product => (
+
+                        <Producto key={product.id} >
+                            <Card style={{ width: '312px' }} border="light" >
+                                <div class="row">
+                                    <div class="col">
+                                        <Foto variant="top" src={product.imagen} />
+                                    </div>
+                                    <div class="col">
+                                        <Card.Body style={{ width: '10rem' }}>
+                                            <TProducto>{product.product}</TProducto>
+                                            <Precio>
+                                                ${product.precio} MXN
+                                            </Precio>
+                                        </Card.Body>
+                                    </div>
+                                </div>
+                                {/* <Counter key={product.id} /> */}
+                            </Card>
+                        </Producto>
+                    ))
+                }
+            </ListProducto>
+        </div >
     }
 
-    
+
 }
