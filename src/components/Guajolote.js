@@ -1,42 +1,36 @@
-import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import axios from 'axios';
+import React from 'react';
 import { urlGuajolota } from '../helpers/Url';
 import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/GuajolotesStyles';
-import Login from './Login';
 
 
-export default class Guajolote extends Component {
+const Guajolote = () => {
 
-    constructor() {
+    const [productos, setProductos] = useState([]);
 
-        super();
-        this.state = {
-            productos: []
+    useEffect(() => {
+      getData();
+    }, []);
+    
 
-        }
-    }
-    componentDidMount() {
-        this.getData()
-    }
-
-    async getData() {
-        const respuesta = await fetch(urlGuajolota)
-        const data = await respuesta.json()
-        this.setState({ productos: data })
-        console.log(data)
-
+    const getData = () => {
+        axios.get(urlGuajolota)
+        .then(response => {
+            setProductos(response.data)
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
 
-    render() {
-        const state = this.state.productos
-
-        return <div>
+    return (
+        <div>
             <Head>
-            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
-            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
-            <h1>Nada como una Guajolota para empezar el dia</h1>
-            <input type="text" />
+                <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
+                <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
+                <h1>Nada como una Guajolota para empezar el dia</h1>
+                <input type="text" />
             </Head>
             <Ul class="row">
                 <Li><a href="">Guajolotas</a></Li>
@@ -45,7 +39,7 @@ export default class Guajolote extends Component {
             </Ul>
             <ListProducto>
                 {
-                    state.map(product => (
+                    productos.map(product => (
 
                         <Producto key={product.id} >
                             <Card style={{ width: '312px' }} border="light" >
@@ -62,14 +56,13 @@ export default class Guajolote extends Component {
                                         </Card.Body>
                                     </div>
                                 </div>
-                                {/* <Counter key={product.id} /> */}
                             </Card>
                         </Producto>
                     ))
                 }
             </ListProducto>
         </div >
-    }
+    );
+};
 
-
-}
+export default Guajolote;
