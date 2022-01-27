@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Formulario from '../components/Formulario';
-import App from '../containers/App';
+import Guajolote from '../components/Guajolote';
 
 export default class AppRouter extends Component {
   render() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App/>} />
+          <Route path="/" element={<Guajolote/>} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/crearCuenta" element={<Formulario />} />
         </Routes>
