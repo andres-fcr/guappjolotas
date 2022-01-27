@@ -1,9 +1,9 @@
-import Guajolote from "../components/Guajolote";
+import AppRouter from "../routes/AppRouter";
 
 function App() {
   return (
     <div className="App">
-      <Guajolote/> 
+      <AppRouter/> 
     </div>
   );
 }
