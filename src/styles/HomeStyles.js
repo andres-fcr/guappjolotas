@@ -8,6 +8,7 @@ display: block;
 margin: auto;
 
 
+
 `
 export const Botones = styled.button`
 

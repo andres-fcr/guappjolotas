@@ -1,22 +1,51 @@
 import React from 'react';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
+import { Formik } from 'formik';
 
 const Login = () => {
     return (<>
-        <fieldset>
-            <FloatingLabel
-                controlId="floatingInput"
-                label="Email address"
-                className="mb-3"
-            >
-                <Form.Control type="email" placeholder="name@example.com" />
-            </FloatingLabel>
-            <FloatingLabel controlId="floatingPassword" label="Password">
-                <Form.Control type="password" placeholder="Password" />
-            </FloatingLabel>
-            <Button type="submit">Submit</Button>
-        </fieldset>
-    </>);
+        <Formik
+        initialValues={{
+          nombre: '',
+          contrasena: '',
+        }}
+        onSubmit={(valores) => {
+          console.log(valores);
+          console.log("Cuenta Creada");
+
+        }}
+      >
+        {({values, handleSubmit, handleChange, handleBlur}) => (
+          <form className='formulario' onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor='nombre'>Nombre de Usuario</label>
+              <input
+                type="text"
+                id='nombre'
+                name='nombre'
+                placeholder=''
+                value={values.nombre}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </div>
+            <div>
+              <label htmlFor='contrasena'>Contraseña</label>
+              <input
+                type="password"
+                id='contrasena'
+                name='contrasena'
+                placeholder=''
+                value={values.contrasena}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </div>
+            <button type='submit'>Iniciar Sesión</button>
+          </form>
+        )}
+      </Formik>
+    </>
+    );
 };
 
 export default Login;
