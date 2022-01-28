@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { urlGuajolota } from '../helpers/Url';
 import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/GuajolotesStyles';
-
+import accounting from 'accounting';
 
 const Guajolote = () => {
 
@@ -58,7 +58,7 @@ const Guajolote = () => {
                                         <Card.Body style={{ width: '10rem' }}>
                                             <TProducto>{product.product}</TProducto>
                                             <Precio>
-                                                $ {product.precio} MXN
+                                                 {accounting.formatMoney(product.precio, "MXN")}
                                             </Precio>
                                         </Card.Body>
                                     </div>
