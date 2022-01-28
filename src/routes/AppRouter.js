@@ -8,7 +8,7 @@ export default class AppRouter extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/crearCuenta" element={<Formulario />} />
         </Routes>

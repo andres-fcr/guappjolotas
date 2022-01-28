@@ -34,9 +34,9 @@ const Guajolote = () => {
                 <input type="text" />
             </Head>
             <Ul class="row">
-                <Li><a href="">Guajolotas</a></Li>
-                <Li><a href="">Bebidas</a></Li>
-                <Li><a href="">Tamales</a></Li>
+                <Li><a href="/">Guajolotas</a></Li>
+                <Li><a href="/">Bebidas</a></Li>
+                <Li><a href="/">Tamales</a></Li>
             </Ul>
             <ListProducto>
                 {
