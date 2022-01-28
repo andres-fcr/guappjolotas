@@ -86,7 +86,6 @@ const Guajolote = () => {
                                             </Card.Body>
                                         </div>
                                     </div>
-<<<<<<< HEAD
                                     <div className="col">
                                         <Card.Body style={{ width: '10rem' }}>
                                             <TProducto>{product.product}</TProducto>
@@ -97,10 +96,9 @@ const Guajolote = () => {
                                     </div>
                                 </div>
                             </Card >
-=======
+
                                 </Card >
                             </Link>
->>>>>>> e10ecea0810c620e26e2b0b18ea2c4375536edee
                         </Producto >
                     ))
                 }
