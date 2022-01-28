@@ -37,6 +37,7 @@ const Formulario = () => {
           console.log(valores);
           console.log("Cuenta Creada");
           cambiarCuentaCreada(true);
+          setTimeout(() => cambiarCuentaCreada(false), 5000);
 
         }}
 
@@ -50,7 +51,7 @@ const Formulario = () => {
                 type="text"
                 id='nombre'
                 name='nombre'
-                placeholder='Ejemplo: Maria Perez Castro'
+                placeholder=''
                 value={values.nombre}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -64,7 +65,7 @@ const Formulario = () => {
                 type="email"
                 id='correo'
                 name='correo'
-                placeholder='Ejemplo: MariaPerez@gmail.com'
+                placeholder='Ej: MariaPerez@gmail.com'
                 value={values.correo}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -78,7 +79,7 @@ const Formulario = () => {
                 type="password"
                 id='contrasena'
                 name='contrasena'
-                placeholder='Ejemplo:Maria452152'
+                placeholder=''
                 value={values.contrasena}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -91,7 +92,7 @@ const Formulario = () => {
                 type="password"
                 id='contrasena2'
                 name='repetirContrasena'
-                placeholder='Ejemplo: Maria452152'
+                placeholder=''
                 value={values.repetirContrasena}
                 onChange={handleChange}
                 onBlur={handleBlur}
