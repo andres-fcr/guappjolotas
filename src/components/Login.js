@@ -7,17 +7,13 @@ const Login = () => {
         initialValues={{
           nombre: '',
           contrasena: '',
-        
-
         }}
         onSubmit={(valores) => {
           console.log(valores);
           console.log("Cuenta Creada");
 
         }}
-
       >
-
         {({values, handleSubmit, handleChange, handleBlur}) => (
           <form className='formulario' onSubmit={handleSubmit}>
             <div>
@@ -32,7 +28,6 @@ const Login = () => {
                 onBlur={handleBlur}
               />
             </div>
-
             <div>
               <label htmlFor='contrasena'>Contraseña</label>
               <input
@@ -47,10 +42,8 @@ const Login = () => {
             </div>
             <button type='submit'>Iniciar Sesión</button>
           </form>
-
         )}
       </Formik>
-
     </>
     );
 };
