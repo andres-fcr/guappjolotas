@@ -12,7 +12,7 @@ export const Producto = styled.li`
 list-style:none;
 font-style: 1.5rem;
 text-align:center;
-margin-top:10px
+margin-top:10px;
 :hover {
     opacity: 0.8;
 }
@@ -33,6 +33,7 @@ export const TProducto = styled(Card.Title)`
 font-size: 14px;
 line-height: 21px;
 `
+
 export const Ul = styled.ul`
 display: flex;
 align-items: center;
