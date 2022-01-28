@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from "formik";
 
 
 const Formulario = () => {
-
+   const [cuentaCreada, cambiarCuentaCreada] = useState(false);
   return (
     <>
       <Formik
@@ -17,11 +17,18 @@ const Formulario = () => {
         
         validate={(valores) => {
             let errores = {};
-
+            //validacion Nombre
           if(!valores.nombre){
             errores.nombre = ("Por favor ingresa un nombre");
-          } else if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
-
+          } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
+              errores.nombre = "Escribe solo letras y espacio"
+          }
+            
+           //validacion correo
+           if(!valores.correo){
+            errores.correo = ("Por favor ingresa un correo electronico");
+          } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)){
+              errores.correo = "El correo solo puede contener letras, numero, puntos, guion bajo"
           }
            return errores
         }}
@@ -29,6 +36,7 @@ const Formulario = () => {
         onSubmit={(valores) => {
           console.log(valores);
           console.log("Cuenta Creada");
+          cambiarCuentaCreada(true);
 
         }}
 
@@ -75,7 +83,6 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.contrasena && <div className='erro'>{errors.contrasena}</div>}
             </div>
 
             <div>
@@ -89,9 +96,9 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.repetirContrasena && <div className='erro'>{errors.repetirContrasena}</div>}
             </div>
             <button type='submit'>Crear Cuenta</button>
+            {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
           </form>
 
         )}
