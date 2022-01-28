@@ -52,7 +52,7 @@ const Guajolote = () => {
                                         <Card.Body style={{ width: '10rem' }}>
                                             <TProducto>{product.product}</TProducto>
                                             <Precio>
-                                                ${product.precio} MXN
+                                                $ {product.precio} MXN
                                             </Precio>
                                         </Card.Body>
                                     </div>
