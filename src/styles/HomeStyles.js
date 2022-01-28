@@ -9,6 +9,7 @@ margin: auto;
 
 
 
+
 `
 export const Botones = styled.button`
 

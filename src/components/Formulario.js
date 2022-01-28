@@ -14,6 +14,18 @@ const Formulario = () => {
           repetirContrasena: ''
 
         }}
+        
+        validate={(valores) => {
+            let errores = {};
+
+          if(!valores.nombre){
+            errores.nombre = ("Por favor ingresa un nombre");
+          } else if(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
+
+          }
+           return errores
+        }}
+
         onSubmit={(valores) => {
           console.log(valores);
           console.log("Cuenta Creada");
@@ -22,7 +34,7 @@ const Formulario = () => {
 
       >
 
-        {({values, handleSubmit, handleChange, handleBlur}) => (
+        {({values,errors, handleSubmit, handleChange, handleBlur}) => (
           <form className='formulario' onSubmit={handleSubmit}>
             <div>
               <label htmlFor='nombre'>Nombre Completo</label>
@@ -35,6 +47,7 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {errors.nombre && <div className='erro'>{errors.nombre}</div>}
             </div>
 
             <div>
@@ -48,6 +61,7 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {errors.correo && <div className='erro'>{errors.correo}</div>}
             </div>
 
             <div>
@@ -61,6 +75,7 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {errors.contrasena && <div className='erro'>{errors.contrasena}</div>}
             </div>
 
             <div>
@@ -74,6 +89,7 @@ const Formulario = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {errors.repetirContrasena && <div className='erro'>{errors.repetirContrasena}</div>}
             </div>
             <button type='submit'>Crear Cuenta</button>
           </form>
