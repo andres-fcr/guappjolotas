@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { urlGuajolota } from '../helpers/Url';
 import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/GuajolotesStyles';
@@ -10,8 +10,9 @@ const Guajolote = () => {
 
     const [productos, setProductos] = useState([]);
 
+    ///////////////State Filtro///////////////////////
     const [lista, setLista] = useState("Guajalotes");
-
+    
     useEffect(() => {
         getData();
     }, []);
@@ -26,9 +27,14 @@ const Guajolote = () => {
                 console.log(error);
             })
     }
+    console.log(productos);
 
-    const listar = productos.map(prod => prod.clase === lista)
-    
+
+    //////////////////////Filtro Categorias//////////////////
+    const filtered = productos.filter(function (element) {
+        return element.clase === lista;
+    });
+
 
     return (
         <div>
@@ -41,13 +47,28 @@ const Guajolote = () => {
                 <input type="text" />
             </Head>
             <Ul className='row'>
-                <Li><a href="/">Guajolotas</a></Li>
-                <Li><a href="/">Bebidas</a></Li>
-                <Li><a href="/">Tamales</a></Li>
+                <Li>
+                    <Button
+                        variant="link"
+                        onClick={() => setLista("Guajalotes")}
+                    >Guajalotas</Button>
+                </Li>
+                <Li>
+                    <Button
+                        variant="link"
+                        onClick={() => setLista("Bebidas")}
+                    >Bebidas</Button>
+                </Li>
+                <Li>
+                    <Button
+                        variant="link"
+                        onClick={() => setLista("Tamales")}
+                    >Tamales</Button>
+                </Li>
             </Ul>
             <ListProducto>
                 {
-                    productos.map(product => (
+                    filtered.map(product => (
 
                         <Producto key={product.id} >
                             <Card style={{ width: '312px' }} border="light" >
