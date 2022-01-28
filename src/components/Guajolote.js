@@ -12,7 +12,7 @@ const Guajolote = () => {
 
     ///////////////State Filtro///////////////////////
     const [lista, setLista] = useState("Guajalotes");
-    
+
     useEffect(() => {
         getData();
     }, []);
@@ -71,21 +71,23 @@ const Guajolote = () => {
                     filtered.map(product => (
 
                         <Producto key={product.id} >
-                            <Card style={{ width: '312px' }} border="light" >
-                                <div className="row">
-                                    <div className="col">
-                                        <Foto variant="top" src={product.imagen} />
+                            <Link style={{ textDecoration: "none" }} to={`/detalle/${product.id}`}>
+                                <Card style={{ width: '312px' }} border="light" >
+                                    <div className="row">
+                                        <div className="col">
+                                            <Foto variant="top" src={product.imagen} />
+                                        </div>
+                                        <div className="col">
+                                            <Card.Body style={{ width: '10rem' }}>
+                                                <TProducto>{product.product}</TProducto>
+                                                <Precio>
+                                                    $ {product.precio} MXN
+                                                </Precio>
+                                            </Card.Body>
+                                        </div>
                                     </div>
-                                    <div className="col">
-                                        <Card.Body style={{ width: '10rem' }}>
-                                            <TProducto>{product.product}</TProducto>
-                                            <Precio>
-                                                $ {product.precio} MXN
-                                            </Precio>
-                                        </Card.Body>
-                                    </div>
-                                </div>
-                            </Card >
+                                </Card >
+                            </Link>
                         </Producto >
                     ))
                 }
