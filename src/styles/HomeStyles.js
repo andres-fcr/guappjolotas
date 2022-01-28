@@ -22,7 +22,7 @@ export const Centrar = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-margin: 10, 10, 10, 10px;.
+margin: 10, 10, 10, 10px;
 
 
 
