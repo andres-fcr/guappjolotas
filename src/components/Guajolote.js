@@ -9,21 +9,27 @@ const Guajolote = () => {
 
     const [productos, setProductos] = useState([]);
 
+    const [lista, setLista] = useState("Guajalotes");
+
     useEffect(() => {
-      getData();
+        getData();
     }, []);
-    
+
 
     const getData = () => {
         axios.get(urlGuajolota)
-        .then(response => {
-            setProductos(response.data)
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                setProductos(response.data)
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
+    const listar = productos.map(function (element) {
+        return element.id > 2;
+    })
+    console.log(listar);
 
     return (
         <div>
@@ -33,7 +39,7 @@ const Guajolote = () => {
                 <h1>Nada como una Guajolota para empezar el dia</h1>
                 <input type="text" />
             </Head>
-            <Ul class="row">
+            <Ul className="row">
                 <Li><a href="">Guajolotas</a></Li>
                 <Li><a href="">Bebidas</a></Li>
                 <Li><a href="">Tamales</a></Li>
@@ -44,21 +50,21 @@ const Guajolote = () => {
 
                         <Producto key={product.id} >
                             <Card style={{ width: '312px' }} border="light" >
-                                <div class="row">
-                                    <div class="col">
+                                <div className="row">
+                                    <div className="col">
                                         <Foto variant="top" src={product.imagen} />
                                     </div>
-                                    <div class="col">
+                                    <div className="col">
                                         <Card.Body style={{ width: '10rem' }}>
                                             <TProducto>{product.product}</TProducto>
                                             <Precio>
-                                                ${product.precio} MXN
+                                                $ {product.precio} MXN
                                             </Precio>
                                         </Card.Body>
                                     </div>
                                 </div>
-                            </Card>
-                        </Producto>
+                            </Card >
+                        </Producto >
                     ))
                 }
             </ListProducto>
