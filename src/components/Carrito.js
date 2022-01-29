@@ -1,3 +1,77 @@
+
+//CREANDO EL CARRITO CON REACT
+
+// import React, { useReducer } from 'react';
+// import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
+// import ProductItem from './ProductItem';
+
+// const Carrito = () => {
+//     const [state,dispatch] = useReducer(carritoReducer,carritoInicialState);
+
+//  const [productos,cart] = state
+
+//   const addToCart = () =>{};
+
+//   const delFromCart = () =>{};
+
+//   const clearCart = () =>{};
+
+//   return (
+  
+//   <div>
+//      <h2>Carrito</h2>
+//      <h3>Productos</h3>
+//      <article className='box'>
+//       {productos.map((product)=> (
+//          <ProductItem key={product.id} data={product} addToCard={addToCart} />
+//       ))}
+//      </article>
+//      <h3>Carrito</h3>
+//      <article className='box'></article>
+//   </div>
+
+//   );
+// };
+
+// export default Carrito;
+
+//DESDE AQUI HACIA ARRIBA ES EL CARRITO
+
+
+
+
+
+
+//Guardando en el localStorage
+
+// const cliente = [],
+//       correo = []
+    
+
+// const guardarItems = document.getElementById('procesarcompra')
+// guardarItems.addEventListener('click', procesarCompra)
+
+
+
+// function procesarCompra() {
+
+//  const clientes = document.getElementById('cliente').value
+//  const correos = document.getElementById('correo').value
+ 
+
+//   cliente.push(clientes)
+//   correo.push(correos)
+  
+
+
+//   localStorage.setItem('user', JSON.stringify(cliente))
+//   localStorage.setItem('email', JSON.stringify(correo))
+  
+
+// }
+
+
+
 // //llamando atraves de la api 
 // document.addEventListener('DOMContentLoaded', () => {
 //     fetchData()
