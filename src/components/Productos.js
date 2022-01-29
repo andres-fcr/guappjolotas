@@ -43,7 +43,7 @@ console.log(tarea);
                     filtered.map(product => (
 
                         <Producto key={product.id} >
-                            <Link to={`/detalle/${product.id}`}>
+                            <Link to={`/detalle/${product.clase}${product.id}`}>
                                 <Card style={{ width: '312px' }} border="light" >
                                     <div className="row">
                                         <div className="col">
@@ -51,7 +51,7 @@ console.log(tarea);
                                         </div>
                                         <div className="col">
                                             <Card.Body style={{ width: '10rem' }}>
-                                                <TProducto>{product.product}</TProducto>
+                                                <TProducto>{product.name}</TProducto>
                                                 <Precio>
                                                     {accounting.formatMoney(product.precio, "MXN")}
                                                 </Precio>

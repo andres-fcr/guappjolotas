@@ -34,7 +34,7 @@ const AppRouter = () => {
           <Route path="*" element={<Guajolote />} />
           <Route path="/crearCuenta" element={<Formulario />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/detalle/:id" element={<Detail />} />
+          <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
         </Routes>
       </BrowserRouter>
     </div>
