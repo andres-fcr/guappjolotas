@@ -5,15 +5,12 @@ export const Bienvenida = styled.img`
 width: 200px;
 height: 200px;
 display: block;
-margin: auto;
-
-
 
 
 `
-export const Botones = styled.button`
+export const Botones = styled.div`
 
-
+float: left;
 
 
 `
@@ -23,7 +20,11 @@ export const Centrar = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-margin: 10, 10, 10, 10px;
+margin-top: 241px;
+margin-left: 80px;
+margin-right: 80px;
+margin-bottom: 360px;
+
 
 
 
