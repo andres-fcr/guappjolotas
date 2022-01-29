@@ -8,7 +8,6 @@ import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
 
 const Productos = ({ tarea }) => {
-console.log(tarea);
 
     const [lista, setLista] = useState("Guajalotes");
 
