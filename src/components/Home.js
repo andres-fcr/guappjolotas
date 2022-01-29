@@ -12,7 +12,7 @@ const Home = () => {
         <Botones>
        <Link to="/iniciarSecion"><Button type='button'>Iniciar sesión</Button></Link> <br></br>
         <Link to="/crearCuenta"><Button type='button'>Crear cuenta</Button></Link>
-        <Link to="/productos">prods</Link>
+        <Link to="/producto">prods</Link>
         </Botones>
         </Centrar>
 

@@ -6,8 +6,6 @@ import Guajolote from '../components/Productos';
 import Home from '../components/Home';
 import Login from '../components/Login';
 import Productos from '../components/Productos';
-import axios from 'axios';
-import { urlGuajolota } from '../helpers/Url';
 import getData from '../helpers/getData';
 
 const AppRouter = () => {
@@ -31,14 +29,12 @@ const AppRouter = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Productos tarea={tarea} />} />
+          <Route path="/producto" element={<Productos tarea={tarea} />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Guajolote />} />
           <Route path="/crearCuenta" element={<Formulario />} />
-          <Route path="/producto" element={<Guajolote />} />
           <Route path="/login" element={<Login />} />
           <Route path="/detalle/:id" element={<Detail />} />
-
         </Routes>
       </BrowserRouter>
     </div>

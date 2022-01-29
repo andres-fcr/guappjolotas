@@ -7,33 +7,15 @@ import accounting from 'accounting';
 import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
 
-const Productos = ({ asd }) => {
-console.log(asd);
-    const [data, setData] = useState([]);
-
-    // const getDatos = async () => {
-    //     const datos = await getData()
-    //     setData(datos)
-    // }
-
-    // useEffect(() => {
-    //     getDatos();
-    // }, []);
-
-    // console.log(data);
+const Productos = ({ tarea }) => {
+console.log(tarea);
 
     const [lista, setLista] = useState("Guajalotes");
 
-    const filtered = []
+    const filtered = tarea.filter(function (element) {
+        return element.clase === lista;
+    });
 
-    // const filtered = data.filter(function (element) {
-    //     return element.clase === lista;
-    // });
-
-
-    // const listar = data.map(function (element) {
-    //     return element.id > lista;
-    // })
 
     return (
         <div>
