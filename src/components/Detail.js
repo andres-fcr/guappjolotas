@@ -74,8 +74,12 @@ const Detail = ({ tarea }) => {
     }
 
     return (<div>
+        <Link to="/producto">
         <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
+        </Link>
+        <Link to="/carrito">
         <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
+        </Link>
         <img src={imagen} alt="product" />
         <h1>{product}</h1>
         <h4>{accounting.formatMoney(precio, "MXN")}</h4>

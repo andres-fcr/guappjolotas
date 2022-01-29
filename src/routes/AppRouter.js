@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
-=======
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
->>>>>>> bf6692b2c70bae75701d754506066031b59c0dcc
 import Detail from '../components/Detail';
 import Formulario from '../components/Formulario';
 import Guajolote from '../components/Productos';
@@ -35,9 +30,10 @@ const AppRouter = () => {
         <Routes>
           <Route path="/producto" element={<Productos tarea={tarea} />} />
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Guajolote />} />
+          <Route path="*" element={<Productos />} />
           <Route path="/crearCuenta" element={<Formulario />} />
           <Route path="/login" element={<Login />} />
+          {/* <Route path="/carrito" element={<Carrito />} /> */}
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
         </Routes>
       </BrowserRouter>
