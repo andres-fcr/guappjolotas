@@ -22,7 +22,6 @@ const AppRouter = () => {
   }, []);
 
   const asd = tarea
-  console.log(asd);
 
 
   return (

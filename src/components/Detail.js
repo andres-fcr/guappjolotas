@@ -6,32 +6,76 @@ import Counter from './Counter';
 
 const Detail = ({ tarea }) => {
 
+
     const params = useParams()
     const { id } = params
-    const num = id.replace(/[^0-9]/g,'')
+    const num = id.replace(/[^0-9]/g, '')
     const withNoDigits = id.replace(/[0-9]/g, '');
 
     const buscado = tarea.find((obj) => obj.id === Number(num));
 
-    const { product, imagen, precio, clase } = buscado
+    const { product, imagen, precio } = buscado
+
 
     const iconos = tarea.filter(function (element) {
         return element.clase === withNoDigits;
     });
 
-    // const combo = () => {
-    //         (iconos.clase === "Tamales" || "Guajalotes") ?
-    //             console.log("Poop") :
-    //             console.log("Piss")
-    // }
-    // useEffect(() => {
-    //   combo();
-      
-    // }, []);
-    
+    const drink = tarea.filter(function (element) {
+        return element.clase === "Bebidas"
+    })
+    const eat = tarea.filter(function (element) {
+        return element.clase === "Tamales"
+    })
+    console.log(withNoDigits);
+
+
+    function Bebida() {
+        return (
+            <div>
+                <p>Selecciona la bebida que más te guste y disfruta de tu desayuno.</p>
+
+                {
+                    drink.map(x => (
+                        <Card key={x.id} style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={x.imagen} />
+                            <Card.Body>
+                                <Card.Title>{x.name}</Card.Title>
+                                <Card.Text>
+                                    {accounting.formatMoney(x.precio, "MXN")}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    ))
+                }
+            </div>
+        )
+    }
+
+    function Comida() {
+        return (
+            <div>
+                <p>Selecciona la torta que más te guste y disfruta de tu desayuno</p>
+                {
+                    eat.map(x => (
+                        <Card key={x.id} style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={x.imagen} />
+                            <Card.Body>
+                                <Card.Title>{x.name}</Card.Title>
+                                <Card.Text>
+                                    {accounting.formatMoney(x.precio, "MXN")}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    ))
+                }
+            </div>
+        )
+    }
+
     return (<div>
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
+        <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
         <img src={imagen} alt="product" />
         <h1>{product}</h1>
         <h4>{accounting.formatMoney(precio, "MXN")}</h4>
@@ -47,21 +91,10 @@ const Detail = ({ tarea }) => {
             ))
         }
         <h3>Guajolocombo</h3>
-        <p>Selecciona la bebida que más te guste y disfruta de tu desayuno.</p>
-        {
-            tarea.map(x => (
-                <Card key={x.id} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={x.imagen} />
-                    <Card.Body>
-                        <Card.Title>{x.name}</Card.Title>
-                        <Card.Text>
-                        {accounting.formatMoney(x.precio, "MXN")}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            ))
-        }
-
+        {withNoDigits == "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
+        <div>
+            <button>Agregar(cantidad) al carrito (valor)</button>
+        </div>
     </div>);
 };
 
