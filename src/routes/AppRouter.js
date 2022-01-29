@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02cf6b6d86141c80cd3b408e4303d227e013013c
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Detail from '../components/Detail';
@@ -23,7 +26,6 @@ const AppRouter = () => {
   }, []);
 
   const asd = tarea
-  console.log(asd);
 
 
   return (
@@ -32,9 +34,10 @@ const AppRouter = () => {
         <Routes>
           <Route path="/producto" element={<Productos tarea={tarea} />} />
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Guajolote />} />
+          <Route path="*" element={<Productos />} />
           <Route path="/crearCuenta" element={<Formulario />} />
           <Route path="/login" element={<Login />} />
+          {/* <Route path="/carrito" element={<Carrito />} /> */}
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
         </Routes>
       </BrowserRouter>
