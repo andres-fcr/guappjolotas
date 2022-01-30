@@ -44,7 +44,7 @@ const Productos = ({ tarea }) => {
 
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
-                                <Cartas style={{ width: '312px' }} border="light" bg="light">
+                                <Cartas style={{ width: '312px' }} border="light" >
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />

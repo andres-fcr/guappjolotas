@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const Cartas = styled(Card)`
 
-background-color: white;
+
 
 `
 
