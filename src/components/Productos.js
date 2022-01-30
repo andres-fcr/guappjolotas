@@ -27,7 +27,7 @@ const Productos = ({ tarea }) => {
                 </Link>
             </Head>
             <h1>Nada como una Guajolota para empezar el dia</h1>
-            <Link to="Busqueda">
+            <Link to="/busqueda">
             <input 
             type="Search"
             style={{ width: '312px', height: "60px",
