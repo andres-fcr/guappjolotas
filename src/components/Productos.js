@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/ProductosStyles';
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Texto, Carrito, Imagenes } from '../styles/ProductosStyles';
 import accounting from 'accounting';
 import { Link } from 'react-router-dom';
 
@@ -17,12 +17,23 @@ const Productos = ({ tarea }) => {
     return (
         <div>
             <Head>
-                <Link to="/">
+
+                <Imagenes>
+
+                   <Link to="/">
                     <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
                 </Link>
+
+                <Carrito>
                 <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
-                <h1>Nada como una Guajolota para empezar el dia</h1>
+                </Carrito>
+                
                 <input type="text" />
+
+                </Imagenes>
+
+                
+                <Texto><h1>Nada como una Guajolota para empezar el dia</h1></Texto>
             </Head>
             <Ul >
                 <Button
@@ -41,7 +52,7 @@ const Productos = ({ tarea }) => {
 
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
-                                <Cartas style={{ width: '312px' }} border="light" bg="#FFF">
+                                <Card style={{ width: '312px' }} border="light" bg="#FFF">
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />
@@ -55,7 +66,7 @@ const Productos = ({ tarea }) => {
                                             </Card.Body>
                                         </div>
                                     </div>
-                                </Cartas >
+                                </Card >
                             </Link>
                         </Producto >
                     ))

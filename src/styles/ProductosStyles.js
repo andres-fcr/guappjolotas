@@ -48,10 +48,50 @@ export const Li = styled.li`
 list-style:none;
 margin-right:30px;
 `
+
 export const Head = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 100px;
+margin-top: 200px;
 `
 
+export const Texto = styled.h1`
+
+text-align: center;
+width:500px;
+height:100px;
+top:200px; 
+left:20px;
+
+font-size: 34px;
+line-height: 41px;
+
+`
+export const Imagenes = styled.div`
+
+position: absolute;
+top: 100px;
+
+`
+
+
+export const Link = styled.div`
+
+position: absolute;
+width: 64px;
+height: 64px;
+left: 24px;
+top: 24px;
+
+`
+
+export const Carrito = styled.div`
+
+float: left;
+ /* width: 64px;
+height: 64px; */
+left: 240px;
+top: 24px; 
+
+`
