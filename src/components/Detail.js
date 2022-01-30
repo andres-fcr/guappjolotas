@@ -2,7 +2,7 @@ import accounting from 'accounting';
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import Counter from './Counter';
+import Counter from '../actions/Counter';
 
 const Detail = ({ tarea }) => {
 

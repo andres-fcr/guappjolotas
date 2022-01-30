@@ -6,12 +6,12 @@ const Formulario = () => {
    const [cuentaCreada, cambiarCuentaCreada] = useState(false);
   return (
     <>
+    <div className='Container'>
       <Formik
         initialValues={{
           nombre: '',
           correo: '',
-          contrasena: '',
-          repetirContrasena: ''
+          contrasena: ''
 
         }}
         
@@ -86,24 +86,13 @@ const Formulario = () => {
               />
             </div>
 
-            <div>
-              <label htmlFor='contrasena'>Repita su Contraseña</label>
-              <input
-                type="password"
-                id='contrasena2'
-                name='repetirContrasena'
-                placeholder=''
-                value={values.repetirContrasena}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </div>
             <button type='submit'>Crear Cuenta</button>
             {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
           </form>
 
         )}
       </Formik>
+      </div>
     </>
   );
 };
