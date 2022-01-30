@@ -37,7 +37,7 @@ const Detail = ({ tarea }) => {
 
                 {
                     drink.map(x => (
-                        <Card key={x.id} style={{ width: '18rem' }}>
+                        <Card key={x.id} style={{ width: '10rem' }}>
                             <Card.Img variant="top" src={x.imagen} />
                             <Card.Body>
                                 <Card.Title>{x.name}</Card.Title>

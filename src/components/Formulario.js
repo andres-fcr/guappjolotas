@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Formula, NombreCompleto, Titulo } from '../styles/FormularioStyles';
-import { Button } from 'react-bootstrap';
+import { Botoncito, Email, Formula, NombreCompleto, Password, Titulo } from '../styles/FormularioStyles';
 
 
 
@@ -73,48 +72,52 @@ const Formulario = () => {
             <Formula  className='formulario' onSubmit={handleSubmit}>
               <Titulo><h1>Registrate.</h1></Titulo>
               <NombreCompleto>
-                <label htmlFor='nombre'>Nombre Completo</label>
+                 <label htmlFor='nombre'></label>
                 <input
                   type="text"
                   id='nombre'
                   name='nombre'
-                  placeholder=''
+                  placeholder='Nombre Completo'
                   value={values.nombre}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
                 {errors.nombre && <div className='erro'>{errors.nombre}</div>}
               </NombreCompleto> 
                
-              <div>
-                <label htmlFor='correo'>Correo Electrónico</label>
+              <Email>
+                <label htmlFor='correo'/>
                 <input
                   type="email"
                   id='correo'
                   name='correo'
-                  placeholder='Ej: MariaPerez@gmail.com'
+                  placeholder='Correo Electrónico Ej: User@gmail.com'
                   value={values.correo}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
                 {errors.correo && <div className='erro'>{errors.correo}</div>}
-              </div>
+              </Email>
 
-              <div>
-                <label htmlFor='contrasena'>Escriba su Contraseña</label>
+              <Password>
+                <label htmlFor='contrasena'></label>
                 <input
                   type="password"
                   id='contrasena'
                   name='contrasena'
-                  placeholder=''
+                  placeholder='Escriba su Contraseña'
                   value={values.contrasena}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
-              </div>
-
-              <Button variant="outline-primary">Crear Cuenta</Button>{' '}
+              </Password>
+              <Botoncito>
+              <button type='submit'>Crear Cuenta</button>
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
+              </Botoncito>
             </Formula>
 
           )
