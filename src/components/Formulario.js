@@ -72,12 +72,12 @@ const Formulario = () => {
             <Formula  className='formulario' onSubmit={handleSubmit}>
               <Titulo><h1>Registrate.</h1></Titulo>
               <NombreCompleto>
-                <label htmlFor='nombre'>Nombre Completo</label>
+                 <label htmlFor='nombre'></label>
                 <input
                   type="text"
                   id='nombre'
                   name='nombre'
-                  placeholder=''
+                  placeholder='Nombre Completo'
                   value={values.nombre}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -91,7 +91,7 @@ const Formulario = () => {
                   type="email"
                   id='correo'
                   name='correo'
-                  placeholder='Ej: MariaPerez@gmail.com'
+                  placeholder='Correo Electrónico Ej: User@gmail.com'
                   value={values.correo}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -100,12 +100,12 @@ const Formulario = () => {
               </Email>
 
               <Password>
-                <label htmlFor='contrasena'>Escriba su Contraseña</label>
+                <label htmlFor='contrasena'></label>
                 <input
                   type="password"
                   id='contrasena'
                   name='contrasena'
-                  placeholder=''
+                  placeholder='Escriba su Contraseña'
                   value={values.contrasena}
                   onChange={handleChange}
                   onBlur={handleBlur}

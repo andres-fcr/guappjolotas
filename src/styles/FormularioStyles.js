@@ -6,14 +6,14 @@ export const Formula = styled.div`
 margin-left: 30px; 
 margin-right: 30px;
 margin-top: 100px;
-box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
-border-color: #FE5101;
 
-*{background-color: #FFA67D;
+*{background-color: #fff;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-color: #FE5101;
+    box-sizing: border-box;
  }
 
  `
@@ -21,24 +21,28 @@ border-color: #FE5101;
 
  padding-bottom: 50px;
  padding-top: 50px;
- color: white;
+ color: #FF5000;
   `
  
  export const NombreCompleto = styled.div`
 
 padding-bottom: 50px;
 padding-top: 50px;
+background-color: #FFBB9C;
  `
+
 
 export const Email = styled.div`
 
 padding-bottom: 50px;
+background-color: #FFBB9C;
 
  `
 
 export const Password = styled.div`
 
 padding-bottom: 50px;
+background-color: #FFBB9C;
 
  `
 
