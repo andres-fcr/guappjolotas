@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-=======
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
->>>>>>> f749ebe4a4a1e46b0c09cb7acb462e68d2091470
 import Detail from '../components/Detail';
 import Formulario from '../components/Formulario';
 import Home from '../components/Home';
