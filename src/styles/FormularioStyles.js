@@ -5,15 +5,14 @@ import styled from "styled-components";
 export const Formula = styled.div`
 margin-left: 100px; 
 margin-right: 100px;
-margin-top: 100px;
-margin-bottom: 50px;
+margin-top: 20px;
 font-size: 20px;
 
 *{
     justify-content: center;
     align-items: center;
     display: flex;
-    border-color: #FE5101;
+    border-color: blue;
     box-sizing: border-box;
  }
 
@@ -21,16 +20,15 @@ font-size: 20px;
  export const Titulo = styled.div`
 
  padding-bottom: 50px;
- padding-top: 50px;
- color: #FF5000;
- font-family: 'Supermercado One', cursive;
+ padding-top: 20px;
+ color: blue;
   `
  
  export const NombreCompleto = styled.div`
 
 padding-bottom: 50px;
 padding-top: 50px;
-background-color: #FFBB9C;
+background-color: blue;
 
  `
 
@@ -38,14 +36,14 @@ background-color: #FFBB9C;
 export const Email = styled.div`
 
 padding-bottom: 50px;
-background-color: #FFBB9C;
+background-color: blue;
 
  `
 
 export const Password = styled.div`
 
 padding-bottom: 50px;
-background-color: #FFBB9C;
+background-color: blue;
 
  `
 
