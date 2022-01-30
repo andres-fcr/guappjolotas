@@ -9,9 +9,17 @@ background-color: whitesmoke;
 
 `
 export const Botones = styled.div`
+align-items: center;
+display: flex;
+justify-content: center;
 
-text-align: center;
     
+
+`
+
+export const Iniciar = styled.div`
+
+padding: 10px;
 
 `
 
