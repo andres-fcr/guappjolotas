@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Formula, NombreCompleto, Titulo } from '../styles/FormularioStyles';
+import { Email, Formula, NombreCompleto, Password, Titulo } from '../styles/FormularioStyles';
 
 
 
@@ -85,7 +85,7 @@ const Formulario = () => {
                 {errors.nombre && <div className='erro'>{errors.nombre}</div>}
               </NombreCompleto> 
                
-              <div>
+              <Email>
                 <label htmlFor='correo'>Correo Electrónico</label>
                 <input
                   type="email"
@@ -97,9 +97,9 @@ const Formulario = () => {
                   onBlur={handleBlur}
                 />
                 {errors.correo && <div className='erro'>{errors.correo}</div>}
-              </div>
+              </Email>
 
-              <div>
+              <Password>
                 <label htmlFor='contrasena'>Escriba su Contraseña</label>
                 <input
                   type="password"
@@ -110,7 +110,7 @@ const Formulario = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-              </div>
+              </Password>
 
               <button type='submit'>Crear Cuenta</button>
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}

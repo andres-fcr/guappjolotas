@@ -8,6 +8,7 @@ margin-right: 30px;
 margin-top: 100px;
 box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
+border-color: #FE5101;
 
 *{background-color: #FFA67D;
     justify-content: center;
@@ -20,6 +21,7 @@ font-family: Arial, Helvetica, sans-serif;
 
  padding-bottom: 50px;
  padding-top: 50px;
+ color: white;
   `
  
  export const NombreCompleto = styled.div`
@@ -28,7 +30,15 @@ padding-bottom: 50px;
 padding-top: 50px;
  `
 
+export const Email = styled.div`
 
+padding-bottom: 50px;
 
+ `
 
+export const Password = styled.div`
+
+padding-bottom: 50px;
+
+ `
 
