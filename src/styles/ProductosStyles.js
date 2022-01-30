@@ -53,7 +53,7 @@ export const Head = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 200px;
+margin-top: 50px;
 `
 
 export const Texto = styled.h1`
@@ -61,7 +61,7 @@ export const Texto = styled.h1`
 text-align: center;
 width:500px;
 height:100px;
-top:200px; 
+top:100px; 
 left:20px;
 
 font-size: 34px;
@@ -70,7 +70,6 @@ line-height: 41px;
 `
 export const Imagenes = styled.div`
 
-position: absolute;
 top: 100px;
 
 `
@@ -78,20 +77,24 @@ top: 100px;
 
 export const Link = styled.div`
 
-position: absolute;
+float: left;
+margin-top: 40px;
+margin-right: 50px;
 width: 64px;
 height: 64px;
-left: 24px;
-top: 24px;
 
 `
 
 export const Carrito = styled.div`
 
-float: left;
- /* width: 64px;
-height: 64px; */
-left: 240px;
-top: 24px; 
+float: right;
+margin-top: 30px;
+margin-left: 10px;
+width: 70px;
+height: 70px;
+`
+
+
+export const BarraDeBusqueda = styled.div`
 
 `
