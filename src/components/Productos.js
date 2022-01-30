@@ -21,20 +21,28 @@ const Productos = ({ tarea }) => {
     return (
         <div>
             <Head>
-                <Link to="/">
+                <Link to="/" style={{ position: "absolute", left: "50px",
+                                     width: "64px", height: "64px", top: "24px"}} >
                     <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
                 </Link>
-                <Link to="/">
+                <Link to="/"  style={{ position: "absolute", right: "50px", 
+                                      top: "44px", width: "24px", height: "24px", opacity: "0.9" }}>
                 <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
                 </Link>
             </Head>
-            <h1>Nada como una Guajolota para empezar el dia</h1>
+            <br></br><br></br><br></br><br></br>
+
+            <h1  style={{ position: "absolute", width: "312px",height: 
+                        "123px",left: "540px",top: "120px" }}
+            > Nada como una Guajolota para empezar el dia</h1>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
+
             <Link to="Busqueda">
             <input 
             type="Search"
-            style={{ width: '312px', height: "60px",
-            position: "absolute", left: "530px" }} 
-            border="radius"
+            style={{ width: '312px', height: "40px",
+            position: "absolute", left: "530px", border: "100%"}} 
+            
             placeholder='Sabor de Guajolota,bebida.'
             
             />
