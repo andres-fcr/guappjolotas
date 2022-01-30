@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 export const Formula = styled.div`
-margin-left: 30px; 
-margin-right: 30px;
+margin-left: 80px; 
+margin-right: 80px;
 margin-top: 100px;
 font-family: Arial, Helvetica, sans-serif;
 

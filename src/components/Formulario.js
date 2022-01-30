@@ -81,12 +81,13 @@ const Formulario = () => {
                   value={values.nombre}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
                 {errors.nombre && <div className='erro'>{errors.nombre}</div>}
               </NombreCompleto> 
                
               <Email>
-                <label htmlFor='correo'>Correo Electrónico</label>
+                <label htmlFor='correo'/>
                 <input
                   type="email"
                   id='correo'
@@ -95,6 +96,7 @@ const Formulario = () => {
                   value={values.correo}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
                 {errors.correo && <div className='erro'>{errors.correo}</div>}
               </Email>
@@ -109,6 +111,7 @@ const Formulario = () => {
                   value={values.contrasena}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  style = {{ width: "640px", height: "64px" }}
                 />
               </Password>
 
