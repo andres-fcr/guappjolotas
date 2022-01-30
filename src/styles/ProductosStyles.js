@@ -2,6 +2,12 @@
 import { Card, CardGroup } from "react-bootstrap";
 import styled from "styled-components";
 
+export const Cartas = styled(Card)`
+
+
+
+`
+
 export const Foto = styled(Card.Img) `
 
 height: 80px;
@@ -57,5 +63,6 @@ export const Head = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 100px;
 `
 

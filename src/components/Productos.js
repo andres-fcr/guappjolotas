@@ -1,11 +1,9 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { urlGuajolota } from '../helpers/Url';
-import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/GuajolotesStyles';
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Cartas } from '../styles/ProductosStyles';
 import accounting from 'accounting';
-import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
+
 
 const Productos = ({ tarea }) => {
 
