@@ -1,5 +1,6 @@
 import React, {  useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Busqueda from '../actions/Busqueda';
 import Detail from '../components/Detail';
 import Formulario from '../components/Formulario';
 import Home from '../components/Home';
@@ -33,6 +34,7 @@ const AppRouter = () => {
           <Route path="/crearCuenta" element={<Formulario />} />
           <Route path="/iniciarSesion" element={<Login />} />
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
+          <Route path="/Busqueda" element={<Busqueda />} />
         </Routes>
       </BrowserRouter>
     </div>
