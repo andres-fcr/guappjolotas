@@ -26,15 +26,17 @@ function Busqueda() {
             })
     }
 
-    const handleChange = e => {
-        setBusqueda(e.target.value);
-        filtrar(e.target.value);
+    const handleChange = ({target}) => {
+        console.log(target.value);
+        setBusqueda(target.value);
+        filtrar(target.value);
     }
 
     const filtrar = (terminoBusqueda) => {
         var resultadoBusqueda = tablaProductos.filter((elemento) => {
             if (elemento.product.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
                 || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+                || elemento.clase.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
             ) {
                 return elemento;
             }
@@ -50,15 +52,7 @@ function Busqueda() {
 
     return (
         <div className='busca'>
-            <input
-                className='form-control inputBuscar'
-                value={busqueda}
-                placeholder='Buscar Productos'
-                onChange={handleChange}
-            />
-            <button className='btn btn-success'>
-                <FontAwesomeIcon icon={faSearch} />
-            </button>
+          
             <input
                 type="Search"
                 style={{
@@ -67,10 +61,10 @@ function Busqueda() {
                 }}
                 border="radius"
                 placeholder='Sabor de Guajolota,bebida.'
-
+                onChange={handleChange}
             />
             <ListProducto>
-                {
+                {   
                     produ.map(product => (
 
                         <Producto key={product.id} >
@@ -82,7 +76,7 @@ function Busqueda() {
                                         </div>
                                         <div className="col">
                                             <Card.Body style={{ width: '10rem' }}>
-                                                <TProducto>{product.name}</TProducto>
+                                                <TProducto>{product.product}</TProducto>
                                                 <Precio>
                                                     {accounting.formatMoney(product.precio, "MXN")}
                                                 </Precio>
