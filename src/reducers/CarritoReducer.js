@@ -5,7 +5,7 @@
 
 
 // export const carritoInicialState = {
-//  productos:[
+//  produc:[
 // { id:1, product: "Guajolotes de tamal Verde", precio: 25, imagen: "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/verde_dcimlm.png"},
 // {id:2, product: "Guajolotes de tamal Mole", precio: 25, imagen: "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/Mole_quk0tw.png"},
 // {id:3, product: "Guajolotes de tamal Guayaba", precio: 25, imagen: "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/guayaba_buucjt.png"},

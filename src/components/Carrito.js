@@ -1,4 +1,5 @@
 
+
 //CREANDO EL CARRITO CON REACT
 
 // import React, { useReducer } from 'react';
@@ -8,9 +9,11 @@
 // const Carrito = () => {
 //     const [state,dispatch] = useReducer(carritoReducer,carritoInicialState);
 
-//  const [productos,cart] = state
+//  const {produc,cart} = state;
 
-//   const addToCart = () =>{};
+//   const addToCart = (id) =>{
+//       console.log(id);
+//   };
 
 //   const delFromCart = () =>{};
 
@@ -22,7 +25,7 @@
 //      <h2>Carrito</h2>
 //      <h3>Productos</h3>
 //      <article className='box'>
-//       {productos.map((product)=> (
+//       {produc.map((product)=> (
 //          <ProductItem key={product.id} data={product} addToCard={addToCart} />
 //       ))}
 //      </article>
@@ -34,6 +37,7 @@
 // };
 
 // export default Carrito;
+
 
 //DESDE AQUI HACIA ARRIBA ES EL CARRITO
 
