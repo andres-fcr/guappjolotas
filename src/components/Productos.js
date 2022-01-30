@@ -27,14 +27,13 @@ const Productos = ({ tarea }) => {
                 <Carrito>
                 <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
                 </Carrito>
-                
-                <input type="text" />
-
                 </Imagenes>
 
-                
                 <Texto><h1>Nada como una Guajolota para empezar el dia</h1></Texto>
             </Head>
+
+            <input type="text" />
+            
             <Ul >
                 <Button
                     onClick={() => setLista("Guajalotes")}
