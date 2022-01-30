@@ -21,8 +21,6 @@ const AppRouter = () => {
     traerDatos();
   }, []);
 
-  const asd = tarea
-
 
   return (
     <div>
@@ -34,7 +32,7 @@ const AppRouter = () => {
           <Route path="/crearCuenta" element={<Formulario />} />
           <Route path="/iniciarSesion" element={<Login />} />
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
-          <Route path="/busqueda" element={<Busqueda />} />
+          <Route path="/busqueda" element={<Busqueda tarea={tarea} />} />
         </Routes>
       </BrowserRouter>
     </div>
