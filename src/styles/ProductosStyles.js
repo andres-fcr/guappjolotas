@@ -2,10 +2,6 @@
 import { Card, CardGroup } from "react-bootstrap";
 import styled from "styled-components";
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7f0f68ee84e5f2e0b076ae5e1c60b84c69d14027
 export const Foto = styled(Card.Img) `
 height: 80px;
 width: 80px;

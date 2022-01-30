@@ -41,11 +41,8 @@ const Productos = ({ tarea }) => {
 
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
-<<<<<<< HEAD
                                 <Cartas style={{ width: '312px' }} border="light" bg="#FFF">
-=======
-                                <Card style={{ width: '312px' }} border="secondary" >
->>>>>>> 7f0f68ee84e5f2e0b076ae5e1c60b84c69d14027
+
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />
@@ -59,7 +56,7 @@ const Productos = ({ tarea }) => {
                                             </Card.Body>
                                         </div>
                                     </div>
-                                </Card >
+                                </Cartas >
                             </Link>
                         </Producto >
                     ))
