@@ -1,11 +1,16 @@
 
-import { Card } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
 import styled from "styled-components";
 
 export const Foto = styled(Card.Img) `
 
 height: 80px;
 width: 80px;
+`
+export const Asd = styled(Card)`
+background: white;
+background-color: white;
+
 `
 
 export const Producto = styled.li`
