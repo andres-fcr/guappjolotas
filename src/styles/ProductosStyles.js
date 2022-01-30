@@ -38,6 +38,27 @@ export const Ul = styled.ul`
 display: flex;
 align-items: center;
 justify-content: center;
+
+`
+
+export const Guajolotes = styled.div`
+
+padding-left: 0px;
+padding-right: 10px;
+
+`
+
+export const Tamales = styled.div`
+
+padding-left: 0px;
+padding-right: 10px;
+
+`
+export const Bebidas = styled.div`
+
+padding-left: 0px;
+padding-right: 10px;
+
 `
 
 export const ConjuntoTexto = styled.div`
@@ -107,7 +128,13 @@ border-radius: 30px;
 
 export const Lupa = styled.div`
 
-position: relative;
-left: 5px;
+position: absolute;
+top: 255px;
+right: 555px;
+width: 55px;
+height: 55px;
+line-height: 55px;
+text-align: center;
+cursor:pointer;
 
 `
