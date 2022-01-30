@@ -6,7 +6,6 @@ export const Formula = styled.div`
 margin-left: 80px; 
 margin-right: 80px;
 margin-top: 100px;
-font-family: 'Supermercado One', cursive;
 
 *{background-color: #fff;
     justify-content: center;
@@ -22,6 +21,7 @@ font-family: 'Supermercado One', cursive;
  padding-bottom: 50px;
  padding-top: 50px;
  color: #FF5000;
+ font-family: 'Supermercado One', cursive;
   `
  
  export const NombreCompleto = styled.div`
