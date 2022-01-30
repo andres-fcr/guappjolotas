@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
 import { Formula, NombreCompleto, Titulo } from '../styles/FormularioStyles';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -112,7 +113,7 @@ const Formulario = () => {
                 />
               </div>
 
-              <button type='submit'>Crear Cuenta</button>
+              <Button variant="outline-primary">Crear Cuenta</Button>{' '}
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
             </Formula>
 

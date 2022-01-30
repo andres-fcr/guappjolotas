@@ -57,12 +57,13 @@ function Busqueda() {
                 type="Search"
                 style={{
                     width: '312px', height: "60px",
-                    position: "absolute", left: "530px"
+                    position: "absolute", left: "615px",
+                    top: "44px"
                 }}
                 border="radius"
                 placeholder='Sabor de Guajolota,bebida.'
                 onChange={handleChange}
-            />
+            /> <br></br> <br></br><br></br> <br></br>
             <ListProducto>
                 {   
                     produ.map(product => (
