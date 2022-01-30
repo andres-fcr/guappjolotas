@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Formik } from 'formik';
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
@@ -73,4 +73,4 @@ const iniciarSesion = (valores) => {
   );
 };
 
-export default Login;
+export default Login ;

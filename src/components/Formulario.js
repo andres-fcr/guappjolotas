@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
+import { Formula } from '../styles/FormularioStyles';
+
 
 
 const Formulario = () => {
@@ -66,7 +68,9 @@ const Formulario = () => {
         >
 
           {({ values, errors, handleSubmit, handleChange, handleBlur }) => (
-            <form className='formulario' onSubmit={handleSubmit}>
+            
+            <Formula  className='formulario' onSubmit={handleSubmit}>
+              
               <div>
                 <label htmlFor='nombre'>Nombre Completo</label>
                 <input
@@ -79,8 +83,8 @@ const Formulario = () => {
                   onBlur={handleBlur}
                 />
                 {errors.nombre && <div className='erro'>{errors.nombre}</div>}
-              </div>
-
+              </div> 
+               
               <div>
                 <label htmlFor='correo'>Correo Electrónico</label>
                 <input
@@ -110,7 +114,7 @@ const Formulario = () => {
 
               <button type='submit'>Crear Cuenta</button>
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
-            </form>
+            </Formula>
 
           )
         

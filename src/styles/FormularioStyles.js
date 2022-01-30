@@ -1,12 +1,16 @@
 
-//ESTILOS FORMULARIO
-// import styled from "styled-components";
+import styled from "styled-components";
 
 
-// export const Container = styled.div`
-//   align-items: center;
-//   margin-top: 150%;
-// `
+export const Formula = styled.div`
+
+ margin-top: 15%;
+ position: absolute;
+ left: 450px;
+ `
+ 
+
+
 
 
 
