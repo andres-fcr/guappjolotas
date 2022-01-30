@@ -1,14 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Card} from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 // import { urlGuajolota } from '../helpers/Url';
-import { Foto,Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from "../styles/ProductosStyles"
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from "../styles/ProductosStyles"
 import accounting from 'accounting';
 // import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+// import { BsArrowLeftSquareFill, BsSearch } from "react-icons/bs";
 
 const Productos = ({ tarea }) => {
 
@@ -50,12 +48,17 @@ const Productos = ({ tarea }) => {
             <br></br><br></br><br></br><br></br>
             <Ul >
                 <Button
+                    variant="link"
                     onClick={() => setLista("Guajalotes")}
                 >Guajalotas</Button>
                 <Button
+                    variant="link"
+
                     onClick={() => setLista("Tamales")}
                 >Tamales</Button>
                 <Button
+                    variant="link"
+
                     onClick={() => setLista("Bebidas")}
                 >Bebidas</Button>
             </Ul>
@@ -65,7 +68,7 @@ const Productos = ({ tarea }) => {
 
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
-                                <Card style={{ width: '312px' }} border="light" >
+                                <Card style={{ width: '312px' }} border="secondary" >
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />
