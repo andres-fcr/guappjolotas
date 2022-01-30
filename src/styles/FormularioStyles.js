@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 
 export const Formula = styled.div`
-margin-left: 80px; 
-margin-right: 80px;
+margin-left: 100px; 
+margin-right: 100px;
 margin-top: 100px;
+margin-bottom: 50px;
+font-size: 20px;
 
-*{background-color: #fff;
+*{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -29,6 +31,7 @@ margin-top: 100px;
 padding-bottom: 50px;
 padding-top: 50px;
 background-color: #FFBB9C;
+
  `
 
 
@@ -43,6 +46,15 @@ export const Password = styled.div`
 
 padding-bottom: 50px;
 background-color: #FFBB9C;
+
+ `
+
+export const Botoncito = styled.div`
+
+margin-top: 10px;
+justify-content: center;
+    align-items: center;
+    display: flex;
 
  `
 

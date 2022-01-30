@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Email, Formula, NombreCompleto, Password, Titulo } from '../styles/FormularioStyles';
+import { Botoncito, Email, Formula, NombreCompleto, Password, Titulo } from '../styles/FormularioStyles';
 
 
 
@@ -114,9 +114,10 @@ const Formulario = () => {
                   style = {{ width: "640px", height: "64px" }}
                 />
               </Password>
-
+              <Botoncito>
               <button type='submit'>Crear Cuenta</button>
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
+              </Botoncito>
             </Formula>
 
           )
