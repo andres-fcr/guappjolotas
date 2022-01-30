@@ -96,5 +96,9 @@ height: 70px;
 
 
 export const BarraDeBusqueda = styled.div`
+display: flex;
+justify-content: center;
+padding-top: 5px;
+padding-bottom: 12px;
 
 `

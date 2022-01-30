@@ -52,7 +52,7 @@ const Productos = ({ tarea }) => {
       </Head>
 
       <BarraDeBusqueda>
-        <input type="text" placeholder="Buscar" required />
+        <input type="text" placeholder="Buscar" required style={{ width: "400px", height: "50px" }} />
       </BarraDeBusqueda>
 
       <Ul>
