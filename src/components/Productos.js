@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Cartas } from '../styles/ProductosStyles';
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from '../styles/ProductosStyles';
 import accounting from 'accounting';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,6 @@ const Productos = ({ tarea }) => {
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
                                 <Cartas style={{ width: '312px' }} border="light" bg="#FFF">
-
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />
