@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
 import { Formik } from "formik";
+import { urlUser } from '../helpers/Url';
+import axios from 'axios';
 
 
 const Formulario = () => {
-  
+
   const [cuentaCreada, cambiarCuentaCreada] = useState(false);
-  
-  const [agregar, setAgregar] = useState([]);
-  
+
+
+  const envioData = (valores) => {
+    axios.post(urlUser, valores)
+
+      .then(response => {
+        console.log(response.data)
+        // Swal.fire({
+        //   icon: 'successs',
+        //   text: 'Te has registardo con éxito',
+        // }).then((result) => {
+        //   if (result.isConfirmed) {
+        //     window.location.href = "/"
+        //   }
+        // })
+      })
+      .catch(error => console.log(error))
+  }
 
   return (
     <>
@@ -17,7 +34,6 @@ const Formulario = () => {
             nombre: '',
             correo: '',
             contrasena: ''
-
           }}
 
           validate={(valores) => {
@@ -43,11 +59,8 @@ const Formulario = () => {
             console.log("Cuenta Creada");
             cambiarCuentaCreada(true);
             setTimeout(() => cambiarCuentaCreada(false), 5000);
-
-
-            setAgregar.unshift(valores)
-            localStorage.setItem()
-            console.log(agregar);
+            localStorage.setItem("User", JSON.stringify(valores))        
+            envioData(valores)    
           }}
 
         >
@@ -100,7 +113,7 @@ const Formulario = () => {
             </form>
 
           )
-
+        
           }
         </Formik>
       </div>
