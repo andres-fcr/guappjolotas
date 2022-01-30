@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 02cf6b6d86141c80cd3b408e4303d227e013013c
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Detail from '../components/Detail';

@@ -10,8 +10,8 @@ display: block;
 `
 export const Botones = styled.div`
 
-float: left;
-
+text-align: center;
+    
 
 `
 
