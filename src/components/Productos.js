@@ -16,43 +16,6 @@ const Productos = ({ tarea }) => {
         return element.clase === lista;
     });
 
-
-    const [produ, setProdu] = useState([]);
-    const [tablaProductos, setTablaProductos] = useState([]);
-    const [busqueda, setBusqueda] = useState("")
-
-
-
-    const peticionGet = async () => {
-        await axios.get("https://guappjolota.herokuapp.com/Productos")
-            .then(response => {
-                setProdu(response.data);
-                setTablaProductos(response.data)
-            }).catch(error => {
-                console.log(error);
-            })
-    }
-
-    const handleChange = e => {
-        setBusqueda(e.target.value);
-        filtrar(e.target.value);
-    }
-
-    const filtrar = (terminoBusqueda) => {
-        var resultadoBusqueda = tablaProductos.filter((elemento) => {
-            if (elemento.product.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-                || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-            ) {
-                return elemento;
-            }
-        });
-        setProdu(resultadoBusqueda);
-    }
-
-    useEffect(() => {
-        peticionGet();
-    }, [])
-
     return (
         <div>
             <Head>
@@ -64,21 +27,17 @@ const Productos = ({ tarea }) => {
                 </Link>
             </Head>
             <h1>Nada como una Guajolota para empezar el dia</h1>
-
-            <div className='busca'>
-                <input
-                    className='form-control inputBuscar'
-                    value={busqueda}
-                    placeholder='Buscar Productos'
-                    onChange={handleChange}
-                />
-                <Button variant="outline-primary">
-                    <BsArrowLeftSquareFill />
-                </Button>
-
-            </div>
-
-
+            <Link to="Busqueda">
+            <input 
+            type="Search"
+            style={{ width: '312px', height: "60px",
+            position: "absolute", left: "530px" }} 
+            border="radius"
+            placeholder='Sabor de Guajolota,bebida.'
+            
+            />
+            </Link>
+            <br></br><br></br><br></br><br></br>
             <Ul >
                 <Button
                     variant="link"
