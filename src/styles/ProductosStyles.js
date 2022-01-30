@@ -100,5 +100,14 @@ display: flex;
 justify-content: center;
 padding-top: 5px;
 padding-bottom: 12px;
+font-size: 20px;
+border-radius: 30px;
+
+`
+
+export const Lupa = styled.div`
+
+position: relative;
+left: 5px;
 
 `

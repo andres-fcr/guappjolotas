@@ -13,6 +13,7 @@ import {
   Carrito,
   Imagenes,
   BarraDeBusqueda,
+  Lupa,
 } from "../styles/ProductosStyles";
 import accounting from "accounting";
 import { Link } from "react-router-dom";
@@ -53,6 +54,9 @@ const Productos = ({ tarea }) => {
 
       <BarraDeBusqueda>
         <input type="text" placeholder="Buscar" required style={{ width: "400px", height: "50px" }} />
+      <Lupa> <img src="https://res.cloudinary.com/alexa01020304/image/upload/v1643515847/pngwing.com_oa3ds0.png"
+      alt="" 
+      width={30}/> </Lupa>
       </BarraDeBusqueda>
 
       <Ul>
