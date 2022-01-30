@@ -1,10 +1,7 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { urlGuajolota } from '../helpers/Url';
 import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Cartas } from '../styles/ProductosStyles';
 import accounting from 'accounting';
-import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
 
 
@@ -44,7 +41,11 @@ const Productos = ({ tarea }) => {
 
                         <Producto key={product.id} >
                             <Link to={`/detalle/${product.clase}${product.id}`}>
+<<<<<<< HEAD
                                 <Cartas style={{ width: '312px' }} border="light" bg="#FFF">
+=======
+                                <Card style={{ width: '312px' }} border="secondary" >
+>>>>>>> 7f0f68ee84e5f2e0b076ae5e1c60b84c69d14027
                                     <div className="row">
                                         <div className="col">
                                             <Foto variant="top" src={product.imagen} />
@@ -58,7 +59,7 @@ const Productos = ({ tarea }) => {
                                             </Card.Body>
                                         </div>
                                     </div>
-                                </Cartas >
+                                </Card >
                             </Link>
                         </Producto >
                     ))
