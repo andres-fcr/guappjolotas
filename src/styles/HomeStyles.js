@@ -8,13 +8,11 @@ display: block;
 background-color: whitesmoke;
 
 `
+
 export const Botones = styled.div`
 align-items: center;
 display: flex;
 justify-content: center;
-
-    
-
 `
 
 export const Iniciar = styled.div`
@@ -28,10 +26,10 @@ export const Centrar = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-margin-top: 241px;
+margin-top: 100px;
 margin-left: 80px;
 margin-right: 80px;
-margin-bottom: 360px;
+
 
 
 
