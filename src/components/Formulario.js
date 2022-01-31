@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Botoncito, Email, Formula, NombreCompleto, Password, Titulo } from '../styles/FormularioStyles';
+import { Botoncito, Dinput, Email, Formula, NombreCompleto, Password, Tinput, Titulo, Ynput } from '../styles/FormularioStyles';
 
 
 
@@ -73,7 +73,7 @@ const Formulario = () => {
               <Titulo><h1>Registrate.</h1></Titulo>
               <NombreCompleto>
                  <label htmlFor='nombre'></label>
-                <input
+                <Dinput
                   type="text"
                   id='nombre'
                   name='nombre'
@@ -88,7 +88,7 @@ const Formulario = () => {
                
               <Email>
                 <label htmlFor='correo'/>
-                <input
+                <Tinput
                   type="email"
                   id='correo'
                   name='correo'
@@ -103,7 +103,7 @@ const Formulario = () => {
 
               <Password>
                 <label htmlFor='contrasena'></label>
-                <input
+                <Ynput
                   type="password"
                   id='contrasena'
                   name='contrasena'
