@@ -29,6 +29,7 @@ const Detail = ({ tarea }) => {
     })
     console.log(withNoDigits);
 
+    const saveCart = 
 
     function Bebida() {
         return (
@@ -75,29 +76,31 @@ const Detail = ({ tarea }) => {
 
     return (<div>
         <Link to="/producto">
-        <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
+            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
         </Link>
         <Link to="/carrito">
-        <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
+            <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
         </Link>
         <img src={imagen} alt="product" />
         <h1>{product}</h1>
         <h4>{accounting.formatMoney(precio, "MXN")}</h4>
         <Counter />
         <h3>Sabor</h3>
-        {
-            iconos.map(i => (
-                <div key={i.id}>
-                    <Link to={`/detalle/${i.clase}${i.id}`}>
-                        <img src={i.icono} alt={i.product} />
-                    </Link>
-                </div>
-            ))
-        }
-        <h3>Guajolocombo</h3>
-        {withNoDigits == "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
         <div>
-            <button>Agregar(cantidad) al carrito (valor)</button>
+            {
+                iconos.map(i => (
+                    <div key={i.id}>
+                        <Link to={`/detalle/${i.clase}${i.id}`}>
+                            <img src={i.icono} alt={i.product} />
+                        </Link>
+                    </div>
+                ))
+            }
+        </div>
+        <h3>Guajolocombo</h3>
+        {withNoDigits === "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
+        <div>
+            <button onClick={()=> saveCart()}>Agregar(cantidad) al carrito (valor)</button>
         </div>
     </div>);
 };
