@@ -7,17 +7,16 @@ const traerDatos = async () => {
     console.log(datos);
     return datos
 };
+console.log(traerDatos);
 
+const carritoInicialState = () => {
 
-export const carritoInicialState = () => {
-    return (
-
-        {
-            productos: [], 
-                cart: [],
-        }
-    )
+        productos = traerDatos.forEach(element => {})
+            
+        
+        // cart: [],
 }
+
 
 export function carritoReducer(state, action) {
     switch (action.type) {

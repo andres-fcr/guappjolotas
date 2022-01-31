@@ -7,8 +7,9 @@ import { Beba, Boto, Botton, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto
 import Carrito from './Carrito';
 
 const Detail = ({ tarea }) => {
-
-
+    
+    console.log(tarea);
+    const clave = "productos";
     const params = useParams()
     const { id } = params
     const num = id.replace(/[^0-9]/g, '')
@@ -30,6 +31,37 @@ const Detail = ({ tarea }) => {
         return element.clase === "Tamales"
     })
     console.log(withNoDigits);
+    
+    const obtener = () => {
+        const productosCodificados = localStorage.getItem(clave);
+        return JSON.parse(productosCodificados) || [];
+    }
+    const productos = obtener();
+
+    const guardar = () => {
+        localStorage.setItem(clave, JSON.stringify(productos));
+    }
+
+
+    const existe = (id) => {
+        return productos.find(producto => producto.id === id);
+    }
+
+    const agregar = (buscado) => {
+        if (!existe(buscado.id)) {
+            productos.push(buscado);
+            guardar();
+        }
+    }
+
+    const quitar = (id) => {
+        const indice = productos.findIndex(p => p.id === id);
+        if (indice != -1) {
+            productos.splice(indice, 1);
+            guardar();
+        }
+    }
+
 
     function Bebida() {
         return (
@@ -38,8 +70,6 @@ const Detail = ({ tarea }) => {
                 <Contodo>
                     {
                         drink.map(x => (
-
-                            <div>
                                 <Cafe key={x.id} style={{ width: '10rem' }}>
                                     <Beba variant="top" src={x.imagen} />
                                     <Card.Body>
@@ -49,7 +79,6 @@ const Detail = ({ tarea }) => {
                                         </Card.Text>
                                     </Card.Body>
                                 </Cafe>
-                            </div>
                         ))
                     }
                 </Contodo>
@@ -109,7 +138,11 @@ const Detail = ({ tarea }) => {
 
         {withNoDigits === "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
 
-       <Carrito/>
+        <button
+            onClick={()=> agregar()}
+        >
+            Agregar al carrito {accounting.formatMoney(precio, "MXN")}
+        </button>
     </div>);
 };
 

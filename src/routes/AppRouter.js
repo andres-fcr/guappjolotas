@@ -14,10 +14,6 @@ import getData from '../helpers/getData';
 
 const AppRouter = () => {
 
-  const [prod, setProd] = useState([]);
-
-  const [cart, setCart] = useState([]);
-
   const [tarea, setTarea] = useState([]);
 
   const traerDatos = async () => {
@@ -41,7 +37,7 @@ const AppRouter = () => {
           <Route path="/iniciarSesion" element={<Login />} />
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
           <Route path="/busqueda" element={<Busqueda tarea={tarea} />} />
-          <Route path="/carrito" element={<Carrito />} />
+          {/* <Route path="/carrito" element={<Carrito />} /> */}
           <Route path="/a" element={<NoEncontrado/>}/>
           <Route path="/b" element={<BusquedaPage/>}/>
         </Routes>
