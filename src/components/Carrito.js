@@ -1,52 +1,49 @@
 
+import React, { useReducer } from 'react';
+import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
+import ProductItem from './ProductItem';
 
-//CREANDO EL CARRITO CON REACT
+const Carrito = () => {
+    const [state,dispatch] = useReducer(carritoReducer,carritoInicialState);
 
-// import React, { useReducer } from 'react';
-// import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
-// import ProductItem from './ProductItem';
+ const {productos,cart} = state;
 
-// const Carrito = () => {
-//     const [state,dispatch] = useReducer(carritoReducer,carritoInicialState);
+  const addToCart = (id) =>{
+      console.log(id);
+  };
 
-//  const {produc,cart} = state;
+  const delFromCart = () =>{};
 
-//   const addToCart = (id) =>{
-//       console.log(id);
-//   };
+  const clearCart = () =>{};
 
-//   const delFromCart = () =>{};
-
-//   const clearCart = () =>{};
-
-//   return (
+  return (
   
-//   <div>
-//      <h2>Carrito</h2>
-//      <h3>Productos</h3>
-//      <article className='box'>
-//       {produc.map((product)=> (
-//          <ProductItem key={product.id} data={product} addToCard={addToCart} />
-//       ))}
-//      </article>
-//      <h3>Carrito</h3>
-//      <article className='box'></article>
-//   </div>
+  <div>
+     <h2>Carrito</h2>
+     <h3>Productos</h3>
+     <article className='box'>
+      {productos.map((product)=> (
+         <ProductItem key={product.id} data={product} addToCard={addToCart} />
+      ))}
+     </article>
+     <h3>Carrito</h3>
+     <article className='box'></article>
+  </div>
 
-//   );
-// };
+  );
+};
 
-// export default Carrito;
-
-
-//DESDE AQUI HACIA ARRIBA ES EL CARRITO
+export default Carrito;
 
 
+// DESDE AQUI HACIA ARRIBA ES EL CARRITO
 
 
 
 
-//Guardando en el localStorage
+
+
+// Guardando en el localStorage
 
 // const cliente = [],
 //       correo = []

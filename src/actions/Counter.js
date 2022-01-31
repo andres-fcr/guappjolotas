@@ -1,35 +1,31 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { contadorInitalState, contadorReducer } from '../reducers/contadorReducer';
+import { TYPES } from './contadorActions';
+
+
+
+
 
 const Counter = () => {
-    const [counter, setCounter] = useState(0);
 
-    // if (counter === 0) {
-    //     alert('ño')
-    // } handleSubstract()
-
+    const [state, dispatch] = useReducer(contadorReducer, contadorInitalState);
     const handleSubstract = () => {
-        setCounter(counter - 1)
+        dispatch({ type: TYPES.DECREMENT })
     }
-
     const handleAdd = () => {
-        setCounter(counter + 1)
+        dispatch({ type: TYPES.INCREMENT })
     }
+    
     return (
-
-        <div>
-
-            <div className="mb-2">
-                <Button variant="primary" onClick={handleSubstract}>
-                    -
-                </Button>{' '}
-
-                <h1>{counter}</h1>
-
-                <Button variant="secondary" onClick={handleAdd} >
-                    +
-                </Button>
-            </div>
+        <div className="mb-2">
+            <Button variant="primary" onClick={handleSubstract}>
+                -
+            </Button>
+            <h1>{state.contador}</h1>
+            <Button variant="secondary" onClick={handleAdd} >
+                +
+            </Button>
         </div>
     );
 }

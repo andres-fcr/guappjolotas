@@ -1,12 +1,9 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 // import { urlGuajolota } from '../helpers/Url';
 import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca, Texto, Input } from "../styles/ProductosStyles"
 import accounting from 'accounting';
-// import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
-// import { BsArrowLeftSquareFill, BsSearch } from "react-icons/bs";
 
 const Productos = ({ tarea }) => {
 
@@ -23,7 +20,7 @@ const Productos = ({ tarea }) => {
                                      width: "64px", height: "64px", top: "24px"}} >
                     <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" alt='' width={62} height="auto" />
                 </Link>
-                <Link to="/"  style={{ position: "absolute", right: "50px", 
+                <Link to="/carrito"  style={{ position: "absolute", right: "50px", 
                                       top: "44px", width: "24px", height: "24px", opacity: "0.9" }}>
                 <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
                 </Link>
