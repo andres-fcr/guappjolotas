@@ -1,9 +1,13 @@
+import React from 'react';
 
-<Word2>
-    <h1>Producto no encontrado. 
-        Realice su búsqueda nuevamente.</h1>
-</Word2>
+const NoEncontrado = () => {
+    return <div>
+        <h1>Producto no encontrado.
+            Realice su búsqueda nuevamente.</h1>
+        <img src="https://res.cloudinary.com/alexa01020304/image/upload/v1643599308/error_olrwxy.png" />
+    </div>;
+};
 
-<Error>
-<img src = "https://res.cloudinary.com/alexa01020304/image/upload/v1643599308/error_olrwxy.png"/>
-</Error>
+export default NoEncontrado;
+
+

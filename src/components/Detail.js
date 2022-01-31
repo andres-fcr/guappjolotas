@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
 import { Beba, Boto, Botton, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
+import Carrito from './Carrito';
 
 const Detail = ({ tarea }) => {
 
@@ -30,29 +31,27 @@ const Detail = ({ tarea }) => {
     })
     console.log(withNoDigits);
 
-    const saveCart = 
-
     function Bebida() {
         return (
             <div>
                 <p>Selecciona la bebida que más te guste y disfruta de tu desayuno.</p>
-                 <Contodo>
-                {
-                    drink.map(x => (
+                <Contodo>
+                    {
+                        drink.map(x => (
 
-                        <div>
-                        <Cafe key={x.id} style={{ width: '10rem' }}>
-                            <Beba variant="top" src={x.imagen} />
-                            <Card.Body>
-                                <Card.Title>{x.name}</Card.Title>
-                                <Card.Text>
-                                    {accounting.formatMoney(x.precio, "MXN")}
-                                </Card.Text>
-                            </Card.Body>
-                        </Cafe>
-                        </div>
-                    ))
-                }
+                            <div>
+                                <Cafe key={x.id} style={{ width: '10rem' }}>
+                                    <Beba variant="top" src={x.imagen} />
+                                    <Card.Body>
+                                        <Card.Title>{x.name}</Card.Title>
+                                        <Card.Text>
+                                            {accounting.formatMoney(x.precio, "MXN")}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Cafe>
+                            </div>
+                        ))
+                    }
                 </Contodo>
             </div>
         )
@@ -62,7 +61,7 @@ const Detail = ({ tarea }) => {
         return (
             <div>
                 <p>Selecciona la torta que más te guste y disfruta de tu desayuno</p>
-               
+
                 {
                     eat.map(x => (
                         <Card key={x.id} style={{ width: '18rem' }}>
@@ -76,17 +75,17 @@ const Detail = ({ tarea }) => {
                         </Card>
                     ))
                 }
-               
+
             </div>
         )
     }
 
     return (<div>
         <Link to="/producto">
-        <Flecha src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
+            <Flecha src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
         </Link>
         <Link to="/carrito">
-        <Carro src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
+            <Carro src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
         </Link>
         <Coma src={imagen} alt="product" />
         <h1>{product}</h1>
@@ -95,24 +94,22 @@ const Detail = ({ tarea }) => {
         <h3>Sabor</h3>
 
         <Contenido>
-        {
-            iconos.map(i => (
-                <div key={i.id}>
-                    <Link to={`/detalle/${i.clase}${i.id}`}>
-                        <Foto src={i.icono} alt={i.product} />
-                    </Link>
-                </div>
-            ))
-        }
+            {
+                iconos.map(i => (
+                    <div key={i.id}>
+                        <Link to={`/detalle/${i.clase}${i.id}`}>
+                            <Foto src={i.icono} alt={i.product} />
+                        </Link>
+                    </div>
+                ))
+            }
         </Contenido>
 
         <h3>Guajolocombo</h3>
-       
+
         {withNoDigits === "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
-        
-        <Boto>
-            <button type='submit'>Agregar(cantidad) al carrito (valor)</button>
-        </Boto>
+
+       <Carrito/>
     </div>);
 };
 
