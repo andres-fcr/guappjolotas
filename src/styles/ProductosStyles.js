@@ -77,17 +77,14 @@ justify-content: center;
 margin-top: 50px;
 `
 
-export const Texto = styled.h1`
+export const Texto = styled.div`
 
 text-align: center;
-width:500px;
-height:100px;
-top:100px; 
-left:20px;
 
-font-size: 34px;
-line-height: 41px;
-
+margin-top:30px;
+margin-left: 500px;
+margin-right: 500px;
+margin-bottom: 50px;
 `
 export const Imagenes = styled.div`
 
@@ -116,26 +113,19 @@ height: 70px;
 `
 
 
-// export const Busca = styled.div`
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// padding-top: 5px;
-// padding-bottom: 12px;
-// font-size: 20px;
-// border-radius: 30px;
+export const Busca = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+`
 
+export const Input = styled.input`
 
+width: 450px;
+height: 60px;
+font-size: 18px;
+outline: none;
+border-color: #FF3E00;
+border-radius: 30px;
 
-// export const Lupa = styled.div`
-
-// position: absolute;
-// top: 255px;
-// right: 555px;
-// width: 55px;
-// height: 55px;
-// line-height: 55px;
-// text-align: center;
-// cursor:pointer;
-
-
+`
