@@ -16,7 +16,7 @@ export const Word = styled.h4`
 
 font-size: 20px;
 text-align: center;
-margin-top: 80px;
+margin-top: 100px;
 color: grey;
 `
 
@@ -24,6 +24,6 @@ export const Img = styled.img`
 
 position: relative;
 margin-left: 700px;
-margin-top: 200px;
+margin-top: 100px;
 width: 80px;
 `
