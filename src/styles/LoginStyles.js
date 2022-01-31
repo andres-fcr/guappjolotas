@@ -57,10 +57,6 @@ background-color: white;
 
 export const Button = styled.button`
 
-margin-top: 10px;
-justify-content: center;
-    align-items: center;
-    display: flex;
     background-color: #FA4A0C;
     color: white;
     border-radius: 30px;
@@ -68,6 +64,11 @@ justify-content: center;
     height: 69px;
  `
 
+export const Div = styled.div`
+justify-content: center;
+align-items: center;
+display: flex;
+`
 
 
 

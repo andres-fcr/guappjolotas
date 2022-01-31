@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Button, Centrar, Cinput, Contrasenana, Correo, Inicio, Linput } from '../styles/LoginStyles';
+import { Button, Centrar, Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
 
 const Login = () => {
 
@@ -77,7 +77,7 @@ const iniciarSesion = (valores) => {
           </Contrasenana>
 
           </Centrar>
-         <div><Button type='submit' >Iniciar Sesión</Button></div>
+         <Div><Button type='submit' >Iniciar Sesión</Button></Div>
         </form>
       )}
     </Formik>
