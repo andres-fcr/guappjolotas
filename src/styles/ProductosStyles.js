@@ -129,7 +129,14 @@ border-color: #FF3E00;
 border-radius: 30px;
 
 `
+export const Img = styled.img`
 
+width: 30px;
+height: 30px;
+position: absolute;
+margin-top: 20px;
+margin-right: 0px;
+`
 // border-radius: 30px;
 
 

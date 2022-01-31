@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 // import { urlGuajolota } from '../helpers/Url';
-import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca, Texto, Input } from "../styles/ProductosStyles"
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca, Texto, Input, Img } from "../styles/ProductosStyles"
 import accounting from 'accounting';
 // import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
@@ -40,6 +40,7 @@ const Productos = ({ tarea }) => {
             type="Search"
             style={{ }} 
             placeholder='Sabor de Guajolota,bebida.'/>
+            <Img src = "https://res.cloudinary.com/alexa01020304/image/upload/v1643515847/pngwing.com_oa3ds0.png"/>
             </Link>
             </Busca>
 
