@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Centrar, Contrasenana, Correo, Inicio } from '../styles/LoginStyles';
+import { Button, Centrar, Cinput, Contrasenana, Correo, Inicio, Linput } from '../styles/LoginStyles';
 
 const Login = () => {
 
@@ -49,8 +49,8 @@ const iniciarSesion = (valores) => {
 </Inicio>
 
         <Correo>
-            <label htmlFor='correo'>Ingresa tu email</label>
-            <input
+            <label htmlFor='correo'></label>
+            <Linput
               type="email"
               id='correo'
               name='correo'
@@ -61,9 +61,10 @@ const iniciarSesion = (valores) => {
               style = {{ width: "640px", height: "64px" }}
             />
           </Correo>
+
           <Contrasenana>
-            <label htmlFor='contrasena'>Contraseña</label>
-            <input
+            <label htmlFor='contrasena'></label>
+            <Cinput
               type="password"
               id='contrasena'
               name='contrasena'
@@ -74,8 +75,9 @@ const iniciarSesion = (valores) => {
               style = {{ width: "640px", height: "64px" }}
             />
           </Contrasenana>
+
           </Centrar>
-          <button type='submit' >Iniciar Sesión</button>
+         <div><Button type='submit' >Iniciar Sesión</Button></div>
         </form>
       )}
     </Formik>
