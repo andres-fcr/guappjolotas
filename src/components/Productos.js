@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 // import { urlGuajolota } from '../helpers/Url';
-import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head } from "../styles/ProductosStyles"
+import { Foto, Li, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca } from "../styles/ProductosStyles"
 import accounting from 'accounting';
 // import getData from '../helpers/getData';
 import { Link } from 'react-router-dom';
@@ -35,16 +35,16 @@ const Productos = ({ tarea }) => {
             > Nada como una Guajolota para empezar el dia</h1>
             <br></br><br></br><br></br><br></br><br></br><br></br>
 
+            <Busca>
             <Link to="/busqueda">
             <input 
             type="Search"
             style={{ width: '312px', height: "40px",
             position: "absolute", left: "530px", border: "100%"}} 
-            
-            placeholder='Sabor de Guajolota,bebida.'
-            
-            />
+            placeholder='Sabor de Guajolota,bebida.'/>
             </Link>
+            </Busca>
+            
             <br></br><br></br><br></br><br></br>
             <Ul >
                 <Button
