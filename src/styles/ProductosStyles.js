@@ -116,26 +116,26 @@ height: 70px;
 `
 
 
-// export const Busca = styled.div`
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// padding-top: 5px;
-// padding-bottom: 12px;
-// font-size: 20px;
-// border-radius: 30px;
+export const Busca = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 5px;
+padding-bottom: 12px;
+font-size: 20px;
+border-radius: 30px;
 
 
 
-// export const Lupa = styled.div`
+//export const Lupa = styled.div`
 
-// position: absolute;
-// top: 255px;
-// right: 555px;
-// width: 55px;
-// height: 55px;
-// line-height: 55px;
-// text-align: center;
-// cursor:pointer;
+//position: absolute;
+//top: 255px;
+//right: 555px;
+/* width: 55px; */
+/* height: 55px;
+line-height: 55px;
+text-align: center;
+cursor:pointer; */ 
 
 
