@@ -1,12 +1,17 @@
 import React from 'react';
+import { Div, Img, Word } from '../styles/NoEncontradoStyles';
 
 const NoEncontrado = () => {
-    return <div>
-        <h1>Producto no encontrado.
-            Realice su búsqueda nuevamente.</h1>
-        <img src="https://res.cloudinary.com/alexa01020304/image/upload/v1643599308/error_olrwxy.png" />
-    </div>;
+    return ( <Div>
+       
+       <Word> <h4>Producto no encontrado.
+            Realice su búsqueda nuevamente.</h4> </Word>
+           
+          <Img src="https://res.cloudinary.com/alexa01020304/image/upload/v1643599308/error_olrwxy.png" />
+    </Div>);
+    
 };
+
 
 export default NoEncontrado;
 
