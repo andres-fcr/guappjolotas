@@ -114,10 +114,10 @@ const Formulario = () => {
                   style = {{ width: "640px", height: "64px" }}
                 />
               </Password>
-              <Botoncito>
-              <button type='submit'>Crear Cuenta</button>
+              
+              <div><Botoncito type='submit'>Crear Cuenta</Botoncito></div>
               {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
-              </Botoncito>
+              
             </Formula>
 
           )

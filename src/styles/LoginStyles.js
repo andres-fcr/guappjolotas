@@ -17,15 +17,6 @@ font-size: 20px;
 
 `
 
-export const Correo = styled.div`
-
-margin-top: 100px;
-margin-left: 80px;
-margin-right: 80px;
-background-color: blueviolet;
-
-`
-
 export const Inicio = styled.div`
 
 margin-top: 50px;
@@ -34,11 +25,22 @@ text-align: center;
 
 `
 
-export const Contrasenana = styled.div`
+export const Correo = styled.div`
 
-margin-top: 100px;
+margin-top: 50px;
+padding-top: 100px;
 margin-left: 80px;
 margin-right: 80px;
+background-color: blueviolet;
 
+`
+
+export const Contrasenana = styled.div`
+
+padding-top: 100px;
+padding-bottom: 100px;
+margin-left: 80px;
+margin-right: 80px;
+background-color: blueviolet;
 
 `

@@ -32,8 +32,8 @@ const iniciarSesion = (valores) => {
   return (<>
     <Formik
       initialValues={{
-        correo: 'andres@gmail.com',
-        contrasena: '123',
+        correo: '',
+        contrasena: '',
       }}
       onSubmit={(valores) => {
         console.log(valores);

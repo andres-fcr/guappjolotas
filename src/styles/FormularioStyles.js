@@ -7,12 +7,11 @@ margin-left: 100px;
 margin-right: 100px;
 margin-top: 20px;
 font-size: 20px;
-
 *{
     justify-content: center;
     align-items: center;
     display: flex;
-    border-color: blue;
+    border-color: #FA4A0C;
     box-sizing: border-box;
  }
 
@@ -21,14 +20,14 @@ font-size: 20px;
 
  padding-bottom: 50px;
  padding-top: 20px;
- color: blue;
+ color: white;
   `
  
  export const NombreCompleto = styled.div`
 
 padding-bottom: 50px;
 padding-top: 50px;
-background-color: blue;
+background-color: white;
 
  `
 
@@ -36,23 +35,24 @@ background-color: blue;
 export const Email = styled.div`
 
 padding-bottom: 50px;
-background-color: blue;
+background-color: white;
 
  `
 
 export const Password = styled.div`
 
 padding-bottom: 50px;
-background-color: blue;
+background-color: white;
 
  `
 
-export const Botoncito = styled.div`
+export const Botoncito = styled.button`
 
 margin-top: 10px;
 justify-content: center;
     align-items: center;
     display: flex;
-
+    background-color: #FA4A0C;
+    height: 20px;
  `
 
