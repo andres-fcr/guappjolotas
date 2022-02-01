@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
 import { Beba, Boto, Botton, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
-import Carrito from './Carrito'; .
+import Carrito from './Carrito'; 
 
 const Detail = ({ tarea }) => {
     
