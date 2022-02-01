@@ -1,10 +1,10 @@
 import accounting from 'accounting';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Botton, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
-import Carrito from './Carrito'; 
+import { Beba, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
+// import Carrito from './Carrito'; 
 
 const Detail = ({ tarea }) => {
     
@@ -54,13 +54,13 @@ const Detail = ({ tarea }) => {
         }
     }
 
-    const quitar = (id) => {
-        const indice = productos.findIndex(p => p.id === id);
-        if (indice != -1) {
-            productos.splice(indice, 1);
-            guardar();
-        }
-    }
+    // const quitar = (id) => {
+    //     const indice = productos.findIndex(p => p.id === id);
+    //     if (indice != -1) {
+    //         productos.splice(indice, 1);
+    //         guardar();
+    //     }
+    //}
 
 
     function Bebida() {
