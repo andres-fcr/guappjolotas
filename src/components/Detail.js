@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Cafe, Carro,  Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio } from '../styles/SliderStyles';
 // import Carrito from './Carrito'; 
 
 
@@ -138,10 +138,10 @@ const Detail = ({ tarea }) => {
        info.map((cs) => (
           
             <Carousel.Item key={ cs.id }>
-              <img className="d-block w-100" src={cs.imagen} alt=" " />
+              <Fotografias className="d-block w-100" src={cs.imagen} width="3500%" height="350px" alt="" /><br /> <br /><br /> <br /><br /> <br />
               <Carousel.Caption>
-                <h3>{cs.product}</h3>
-                <p>{cs.precio}</p>
+                <Nombre>{cs.product}</Nombre>
+                <Prepio>{cs.precio}</Prepio>
               </Carousel.Caption>
             </Carousel.Item>
           

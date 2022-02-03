@@ -51,8 +51,11 @@ left: 80px;
 
 export const Boto = styled.button`
  background-color: #FA4A0C;
- 
-
+ border-radius: 20px;
+ text-align: center;
+ color: white;
+ width: 290px;
+ height: 40px;
  `
 
 
@@ -71,4 +74,27 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 8px;
+`
+
+export const Nombre = styled.h3`
+color: black;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+font-size: larger;
+`
+
+
+export const Prepio = styled.p`
+color: black;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+font-size: larger;
+`
+
+export const Fotografias = styled.img` 
+max-width: 30%;
+max-height: 30%;
+display: block;
+margin: auto;
+
 `
