@@ -49,11 +49,11 @@ height: 200px;
 left: 80px;
 `
 
-// export const Boto = styled.button`
-// background-color: #FA4A0C;
+export const Boto = styled.button`
+ background-color: #FA4A0C;
+ 
 
-
-// `
+ `
 
 
 
