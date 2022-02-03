@@ -174,6 +174,7 @@ const Detail = ({ tarea }) => {
           <Comida />
         )}
         
+       <br /><br />
           <Boto onClick={() => agregar()}>
             Agregar al carrito {accounting.formatMoney(precio, "MXN")}
           </Boto>

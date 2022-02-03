@@ -25,6 +25,12 @@ margin: 0px 52px;
 
 export const Cafe = styled(Card)`
 /* margin-top: 50%; */
+float: left;
+margin-right: 20px;
+position: relative;
+top: 0;
+left: 0;
+border: 1px, red solid;
 `
 
 
@@ -56,6 +62,7 @@ export const Boto = styled.button`
  color: white;
  width: 290px;
  height: 40px;
+ margin-left: 40%;
  `
 
 
