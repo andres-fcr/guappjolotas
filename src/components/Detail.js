@@ -1,14 +1,12 @@
 import accounting from 'accounting';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Botton, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
-import Carrito from './Carrito';
+import { Beba, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
 
 const Detail = ({ tarea }) => {
-    
-    console.log(tarea);
+
     const clave = "productos";
     const params = useParams()
     const { id } = params
@@ -31,7 +29,7 @@ const Detail = ({ tarea }) => {
         return element.clase === "Tamales"
     })
     console.log(withNoDigits);
-    
+
     const obtener = () => {
         const productosCodificados = localStorage.getItem(clave);
         return JSON.parse(productosCodificados) || [];
@@ -54,13 +52,13 @@ const Detail = ({ tarea }) => {
         }
     }
 
-    const quitar = (id) => {
-        const indice = productos.findIndex(p => p.id === id);
-        if (indice != -1) {
-            productos.splice(indice, 1);
-            guardar();
-        }
-    }
+    // const quitar = (id) => {
+    //     const indice = productos.findIndex(p => p.id === id);
+    //     if (indice !== -1) {
+    //         productos.splice(indice, 1);
+    //         guardar();
+    //     }
+    // }
 
 
     function Bebida() {
@@ -70,15 +68,15 @@ const Detail = ({ tarea }) => {
                 <Contodo>
                     {
                         drink.map(x => (
-                                <Cafe key={x.id} style={{ width: '10rem' }}>
-                                    <Beba variant="top" src={x.imagen} />
-                                    <Card.Body>
-                                        <Card.Title>{x.name}</Card.Title>
-                                        <Card.Text>
-                                            {accounting.formatMoney(x.precio, "MXN")}
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Cafe>
+                            <Cafe key={x.id} style={{ width: '10rem' }}>
+                                <Beba variant="top" src={x.imagen} />
+                                <Card.Body>
+                                    <Card.Title>{x.name}</Card.Title>
+                                    <Card.Text>
+                                        {accounting.formatMoney(x.precio, "MXN")}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Cafe>
                         ))
                     }
                 </Contodo>
@@ -139,7 +137,7 @@ const Detail = ({ tarea }) => {
         {withNoDigits === "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
 
         <button
-            onClick={()=> agregar()}
+            onClick={() => agregar()}
         >
             Agregar al carrito {accounting.formatMoney(precio, "MXN")}
         </button>

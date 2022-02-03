@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import { Button } from 'react-bootstrap';
 import { contadorInitalState, contadorReducer } from '../reducers/contadorReducer';
 import { TYPES } from './contadorActions';
