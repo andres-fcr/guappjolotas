@@ -33,6 +33,7 @@ function Busqueda() {
     }
 
     const filtrar = (terminoBusqueda) => {
+        // eslint-disable-next-line array-callback-return
         var resultadoBusqueda = tablaProductos.filter((elemento) => {
             if (elemento.product.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
                 || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())

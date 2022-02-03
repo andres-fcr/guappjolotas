@@ -1,9 +1,13 @@
 import accounting from 'accounting';
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Cafe, Carro, Coma, Contenido, Contodo, Flecha, Foto } from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio } from '../styles/SliderStyles';
+// import Carrito from './Carrito'; 
+
+
+
 
 const Detail = ({ tarea }) => {
 
@@ -17,6 +21,9 @@ const Detail = ({ tarea }) => {
 
     const { product, imagen, precio } = buscado
 
+    const info = tarea.filter(function (element) {
+        return element.clase === buscado.clase;
+    });
 
     const iconos = tarea.filter(function (element) {
         return element.clase === withNoDigits;
@@ -107,41 +114,72 @@ const Detail = ({ tarea }) => {
         )
     }
 
-    return (<div>
+    return (
+      <div>
         <Link to="/producto">
-            <Flecha src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png" alt="back" />
+          <Flecha
+            src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png"
+            alt="back"
+          />
         </Link>
         <Link to="/carrito">
-            <Carro src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png" alt="carrito" />
-        </Link>
-        <Coma src={imagen} alt="product" />
+          <Carro
+            src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496426/guappjolotas/shopping-cart_pbl62y.png"
+            alt="carrito"
+          />
+        </Link>{" "}
+        <br /> <br />
+        <br /> <br />
+
+
+        <Carousel>
+        {
+       info.map((cs) => (
+          
+            <Carousel.Item key={ cs.id }>
+              <Fotografias className="d-block w-100" src={cs.imagen} width="3500%" height="350px" alt="" /><br /> <br /><br /> <br /><br /> <br />
+              <Carousel.Caption>
+                <Nombre>{cs.product}</Nombre>
+                <Prepio>{cs.precio}</Prepio>
+              </Carousel.Caption>
+            </Carousel.Item>
+          
+        ))
+        }
+        </Carousel>
+
+
+
+        {/* <Coma src={imagen} alt="product" />
         <h1>{product}</h1>
-        <h4>{accounting.formatMoney(precio, "MXN")}</h4>
+        <h4>{accounting.formatMoney(precio, "MXN")}</h4> */}
         <Counter />
         <h3>Sabor</h3>
-
         <Contenido>
-            {
-                iconos.map(i => (
-                    <div key={i.id}>
-                        <Link to={`/detalle/${i.clase}${i.id}`}>
-                            <Foto src={i.icono} alt={i.product} />
-                        </Link>
-                    </div>
-                ))
-            }
+          {iconos.map((i) => (
+            <div key={i.id}>
+              <Link to={`/detalle/${i.clase}${i.id}`}>
+                <Foto src={i.icono} alt={i.product} />
+              </Link>
+            </div>
+          ))}
         </Contenido>
-
         <h3>Guajolocombo</h3>
-
-        {withNoDigits === "Tamales" ? <Bebida /> : withNoDigits === "Guajalotes" ? <Bebida /> : <Comida />}
-
-        <button
-            onClick={() => agregar()}
-        >
+        {withNoDigits === "Tamales" ? (
+          <Bebida />
+        ) : withNoDigits === "Guajalotes" ? (
+          <Bebida />
+        ) : (
+          <Comida />
+        )}
+        
+       <br /><br />
+          <Boto onClick={() => agregar()}>
             Agregar al carrito {accounting.formatMoney(precio, "MXN")}
-        </button>
-    </div>);
+          </Boto>
+    
+      </div>
+    );
 };
 
 export default Detail;

@@ -38,8 +38,8 @@ const AppRouter = () => {
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
           <Route path="/busqueda" element={<Busqueda tarea={tarea} />} />
           {/* <Route path="/carrito" element={<Carrito />} /> */}
-          {/* <Route path="/a" element={<NoEncontrado/>}/>
-          <Route path="/b" element={<BusquedaPage/>}/> */}
+          {/* <Route path="/a" element={<NoEncontrado/>}/> */}
+          {/* <Route path="/b" element={<BusquedaPage/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>
