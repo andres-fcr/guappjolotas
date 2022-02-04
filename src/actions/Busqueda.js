@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Foto, Link, Precio, Producto, TProducto } from "../styles/ProductosStyles";
+import { Foto, Precio, Producto, TProducto } from "../styles/ProductosStyles";
 import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
 import accounting from "accounting";
-import {ListProductos } from "../styles/BusquedaStyles";
+import {Lilinput, ListProductos } from "../styles/BusquedaStyles";
 import { Linput, Div } from "../styles/LoginStyles";
+import { Link } from 'react-router-dom';
 
 
 function Busqueda() {
@@ -57,7 +58,7 @@ function Busqueda() {
         <div className='busca'>
           
           <Div>
-            <Linput
+            <Lilinput
                 type="Search"
                 placeholder='Sabor de Guajolota,bebida.'
                 onChange={handleChange}

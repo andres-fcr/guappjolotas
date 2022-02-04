@@ -32,8 +32,16 @@ export const ListProductos = styled.ul`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding:0 200px 0 20px;
 justify-content: center;
 margin-bottom:50px;
 `
+
+export const Lilinput = styled.input`
+padding-left: 20px;
+ border-radius: 30px;
+ width:350px;
+ height: 40px;
+ font-size: 15px;
+background-color:#E7E7E7;
+ `
 
