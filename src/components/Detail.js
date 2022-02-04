@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Cafe, Carro,  Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio } from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Comi,  Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso, Sumador } from '../styles/SliderStyles';
 // import Carrito from './Carrito'; 
 
 
@@ -97,19 +97,21 @@ const Detail = ({ tarea }) => {
             <div>
                 <p>Selecciona la torta que más te guste y disfruta de tu desayuno</p>
 
-                {
+                <Contodo>
+                  {
                     eat.map(x => (
-                        <Card key={x.id} style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={x.imagen} />
+                        <Cafe key={x.id} style={{ width: '13rem' }}>
+                            <Comi variant="top" src={x.imagen} />
                             <Card.Body>
                                 <Card.Title>{x.name}</Card.Title>
                                 <Card.Text>
                                     {accounting.formatMoney(x.precio, "MXN")}
                                 </Card.Text>
                             </Card.Body>
-                        </Card>
+                        </Cafe>
                     ))
-                }
+                  }
+                </Contodo>
 
             </div>
         )
@@ -134,6 +136,7 @@ const Detail = ({ tarea }) => {
 
 
         <Carousel>
+        
         {
        info.map((cs) => (
           
@@ -144,18 +147,21 @@ const Detail = ({ tarea }) => {
                 <Prepio>{cs.precio}</Prepio>
               </Carousel.Caption>
             </Carousel.Item>
-          
         ))
         }
         </Carousel>
 
 
-
+        <Counter />
         {/* <Coma src={imagen} alt="product" />
         <h1>{product}</h1>
         <h4>{accounting.formatMoney(precio, "MXN")}</h4> */}
-        <Counter />
-        <h3>Sabor</h3>
+        
+         
+        
+        
+
+        <Sabroso>Sabor</Sabroso>
         <Contenido>
           {iconos.map((i) => (
             <div key={i.id}>

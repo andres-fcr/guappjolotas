@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { Button } from 'react-bootstrap';
 import { contadorInitalState, contadorReducer } from '../reducers/contadorReducer';
+import { Sumador } from '../styles/SliderStyles';
 import { TYPES } from './contadorActions';
 
 
@@ -18,7 +19,7 @@ const Counter = () => {
     }
     
     return (
-        <div className="mb-2">
+        <Sumador className="mb-2">
             <Button variant="primary" onClick={handleSubstract}>
                 -
             </Button>
@@ -26,7 +27,7 @@ const Counter = () => {
             <Button variant="secondary" onClick={handleAdd} >
                 +
             </Button>
-        </div>
+        </Sumador>
     );
 }
 
