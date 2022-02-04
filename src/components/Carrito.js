@@ -6,10 +6,10 @@
 
 
 // const Carrito = ({buscado}) => {
-    
+
 //     const clave = "productos";
 //     const productos = obtener();
-    
+
 //     const guardar = () => {
 //         localStorage.setItem(clave, JSON.stringify(productos));
 //     }
@@ -42,3 +42,47 @@
 // };
 
 // export default Carrito;
+
+
+
+
+
+
+//CREANDO EL CARRITO CON REACT
+
+import React, { useReducer } from 'react';
+import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
+import ProductItem from './ProductItem';
+
+const Carrito = () => {
+    const [state, dispatch] = useReducer(carritoReducer, carritoInicialState);
+
+    const { produc, cart } = state;
+
+    const addToCart = (id) => {
+        console.log(id);
+    };
+
+    const delFromCart = () => { };
+
+    const clearCart = () => { };
+
+    return (
+
+        <div>
+            <h2>Carrito</h2>
+            <h3>Productos</h3>
+            <article className='box'>
+                {produc.map((product) => (
+                    <ProductItem key={product.id} data={product} addToCard={addToCart} />
+                ))}
+            </article>
+            <h3>Carrito</h3>
+            <article className='box'></article>
+        </div>
+
+    );
+};
+
+export default Carrito;
+
