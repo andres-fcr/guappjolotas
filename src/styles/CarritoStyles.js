@@ -36,7 +36,8 @@ export const Boton = styled.button`
 border: none;
  background-color: #FA4A0C;
  border-radius: 30px;
- text-align: center;
+ align-items: center;
+ justify-content: center;
  color: black;
  width: 190px;
  height: 50px;
