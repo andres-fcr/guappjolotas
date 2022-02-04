@@ -40,7 +40,7 @@ border: none;
  color: black;
  width: 190px;
  height: 50px;
- margin-left: 640px;
+ margin-left: 45%;
  margin-bottom:20px ;
  margin-top: 80px;
 `
