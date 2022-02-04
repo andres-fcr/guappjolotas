@@ -29,6 +29,7 @@ border-radius: 40px;
 `
 
 export const ListProductos = styled.ul`
+margin-top: 50px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -37,6 +38,8 @@ margin-bottom:50px;
 `
 
 export const Lilinput = styled.input`
+
+margin-top: 85px;
 padding-left: 20px;
  border-radius: 30px;
  width:350px;
