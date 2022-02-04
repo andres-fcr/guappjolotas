@@ -63,6 +63,8 @@ export const Boto = styled.button`
  width: 290px;
  height: 40px;
  margin-left: 40%;
+ border: none;
+  color: white;
  `
 
 
@@ -75,12 +77,11 @@ align-items: flex-start;
 
 
 export const Contodo = styled.div`
-display: flex;
-align-items: flex-start;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 8px;
+display: grid;
+grid-template-columns: repeat(auto-fill, 200px);
+gap: 40px;
+padding: 40px;
+justify-content: center;
 `
 
 export const Nombre = styled.h3`

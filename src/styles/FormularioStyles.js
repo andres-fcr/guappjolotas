@@ -1,83 +1,83 @@
 
-import styled from "styled-components";
+// import styled from "styled-components";
 
 
-export const Formula = styled.div`
-margin-left: 100px; 
-margin-right: 100px;
-margin-top: 20px;
-font-size: 20px;
-*{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border-color: #FA4A0C;
-    box-sizing: border-box;
- }
+// export const Formula = styled.div`
+// margin-left: 100px; 
+// margin-right: 100px;
+// margin-top: 20px;
+// font-size: 20px;
+// *{
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     border-color: #FA4A0C;
+//     box-sizing: border-box;
+//  }
 
- `
- export const Titulo = styled.div`
+//  `
+//  export const Titulo = styled.div`
 
- padding-bottom: 50px;
- padding-top: 20px;
- color: #FA4A0C;
-  `
+//  padding-bottom: 50px;
+//  padding-top: 20px;
+//  color: #FA4A0C;
+//   `
  
 
- export const Dinput = styled.input`
+//  export const Dinput = styled.input`
 
- border-radius: 30px;`
+//  border-radius: 30px;`
 
- export const NombreCompleto = styled.div`
+//  export const NombreCompleto = styled.div`
 
-padding-bottom: 50px;
-padding-top: 50px;
-background-color: white;
+// padding-bottom: 50px;
+// padding-top: 50px;
+// background-color: white;
 
- `
+//  `
 
-// Input Email
+// // Input Email
 
-export const Tinput = styled.input`
+// export const Tinput = styled.input`
 
-border-radius: 30px;
+// border-radius: 30px;
 
- `
-export const Email = styled.div`
+//  `
+// export const Email = styled.div`
 
-padding-bottom: 50px;
-background-color: white;
+// padding-bottom: 50px;
+// background-color: white;
 
- `
+//  `
 
-// Input Contraseña
+// // Input Contraseña
 
-export const Ynput = styled.input`
+// export const Ynput = styled.input`
 
-border-radius: 30px;
+// border-radius: 30px;
 
- `
+//  `
 
-export const Password = styled.div`
+// export const Password = styled.div`
 
-padding-bottom: 50px;
-background-color: white;
+// padding-bottom: 50px;
+// background-color: white;
 
- `
+//  `
 
 
-// Boton
+// // Boton
 
-export const Botoncito = styled.button`
+// export const Botoncito = styled.button`
 
-margin-top: 10px;
-justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: #FA4A0C;
-    color: white;
-    border-radius: 30px;
-    width: 312px;
-    height: 69px;
- `
+// margin-top: 10px;
+// justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     background-color: #FA4A0C;
+//     color: white;
+//     border-radius: 30px;
+//     width: 312px;
+//     height: 69px;
+//  `
 

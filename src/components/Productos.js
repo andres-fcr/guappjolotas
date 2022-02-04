@@ -4,6 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import { Foto, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca, Texto, Input } from "../styles/ProductosStyles"
 import accounting from 'accounting';
 import { Link } from 'react-router-dom';
+import { Linput } from '../styles/LoginStyles';
 
 const Productos = ({ tarea }) => {
 
@@ -25,7 +26,6 @@ const Productos = ({ tarea }) => {
                 <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/carrito_mlxzjd.png" alt="" width={20} height="auto" />
                 </Link>
             </Head>
-            <br></br><br></br><br></br><br></br>
 
             <Texto>
             <h1> Nada como una Guajolota para empezar el dia</h1>
@@ -33,13 +33,12 @@ const Productos = ({ tarea }) => {
 
             <Busca>
             <Link to="/busqueda">
-            <Input
+            <Linput
             type="Search"
             placeholder='Sabor de Guajolota,bebida.'/>
             </Link>
             </Busca>
 
-            <br></br><br></br><br></br><br></br>
             <Ul >
                 <Button
                     variant="link"
