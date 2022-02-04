@@ -84,9 +84,10 @@ font-size:25px;
 color: #FA4A0C;
 text-align: center;
 margin-top:30px;
-margin-left: 500px;
-margin-right: 500px;
+margin-left: 200px;
+margin-right: 200px;
 margin-bottom: 50px;
+box-sizing: border-box;
 `
 export const Imagenes = styled.div`
 
