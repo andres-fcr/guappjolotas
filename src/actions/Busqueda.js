@@ -7,7 +7,7 @@ import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
 import accounting from "accounting";
 import {Lilinput, ListProductos } from "../styles/BusquedaStyles";
-import { Linput, Div } from "../styles/LoginStyles";
+import { Div } from "../styles/LoginStyles";
 import { Link } from 'react-router-dom';
 
 
