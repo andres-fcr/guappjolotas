@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Foto, Link, ListProducto, Precio, Producto, TProducto } from "../styles/ProductosStyles";
+import { Foto, Link, Precio, Producto, TProducto } from "../styles/ProductosStyles";
 import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
 import accounting from "accounting";
+import {ListProductos } from "../styles/BusquedaStyles";
+import { Linput, Div } from "../styles/LoginStyles";
 
 
 function Busqueda() {
@@ -54,18 +56,13 @@ function Busqueda() {
     return (
         <div className='busca'>
           
-            <input
+          <Div>
+            <Linput
                 type="Search"
-                style={{
-                    width: '312px', height: "60px",
-                    position: "absolute", left: "615px",
-                    top: "44px"
-                }}
-                border="radius"
                 placeholder='Sabor de Guajolota,bebida.'
                 onChange={handleChange}
-            /> <br></br> <br></br><br></br> <br></br>
-            <ListProducto>
+            />
+            <ListProductos>
                 {   
                     produ.map(product => (
 
@@ -83,15 +80,15 @@ function Busqueda() {
                                                     {accounting.formatMoney(product.precio, "MXN")}
                                                 </Precio>
                                             </Card.Body>
-                                        </div>
+                                      </div>
                                     </div>
                                 </Card >
                             </Link>
                         </Producto >
                     ))
                 }
-            </ListProducto>
-
+            </ListProductos>
+            </Div>
         </div>
     )
 

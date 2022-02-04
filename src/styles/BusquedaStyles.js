@@ -28,5 +28,12 @@ width: 80px;
 border-radius: 40px;
 `
 
-
+export const ListProductos = styled.ul`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding:0 200px 0 20px;
+justify-content: center;
+margin-bottom:50px;
+`
 
