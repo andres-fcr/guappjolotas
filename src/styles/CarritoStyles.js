@@ -33,16 +33,21 @@ padding-right: 200px;
 `
 
 export const Boton = styled.button`
-border: none;
  background-color: #FA4A0C;
  border-radius: 30px;
  align-items: center;
  justify-content: center;
- color: black;
+ //color: black;
  width: 190px;
  height: 50px;
  margin-left: 45%;
  margin-bottom:20px ;
  margin-top: 80px;
+
+:hover{
+    background-color: white;
+    border-color: orange;
+}
+
 `
 
