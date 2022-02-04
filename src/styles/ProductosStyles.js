@@ -23,6 +23,7 @@ flex-direction: column;
 align-items: center;
 padding:0 300px 0 300px;
 justify-content: center;
+margin-bottom:50px;
 `
 
 export const Precio = styled(Card.Text)`
@@ -38,7 +39,8 @@ export const Ul = styled.ul`
 display: flex;
 align-items: center;
 justify-content: center;
-
+margin-bottom:10px;
+margin-top:10px;
 `
 
 export const Guajolotes = styled.div`
@@ -78,9 +80,9 @@ margin-top: 50px;
 `
 
 export const Texto = styled.div`
-
+font-size:25px;
+color: #FA4A0C;
 text-align: center;
-
 margin-top:30px;
 margin-left: 500px;
 margin-right: 500px;

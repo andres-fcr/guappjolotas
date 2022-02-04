@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Foto, Link, ListProducto, Precio, Producto, TProducto } from "../styles/ProductosStyles";
 import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
@@ -28,7 +28,7 @@ function Busqueda() {
 
     const handleChange = ({target}) => {
         console.log(target.value);
-        //setBusqueda(target.value);
+        // setBusqueda(target.value);
         filtrar(target.value);
     }
 

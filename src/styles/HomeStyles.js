@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Bienvenida = styled.img`
 margin-top: 25px;
-width: 200px;
-height: 200px;
+width: 150px;
+height: auto;
 display: block;
 background-color: whitesmoke;
-
 `
 
 export const Botones = styled.div`
 align-items: center;
 display: flex;
 justify-content: center;
+flex-direction: column;
 margin-top: 25px;
 `
 
@@ -35,6 +35,5 @@ margin-right: 80px;
 
 export const Titulo =styled.div`
  font-weight: bold;
- font-size: 50px;
-font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 40px;
 `
