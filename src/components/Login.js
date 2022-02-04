@@ -6,14 +6,6 @@ import { Button, Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../st
 
 const Login = () => {
 
-  // const getUser = () => {
-  //   const getLocal = localStorage.getItem("User")
-  //   console.log(JSON.parse(getLocal));
-  // }
-  // useEffect(() => {
-  //   getUser()
-  // }, []);
-
   const iniciarSesion = (valores) => {
     axios.get(urlUser, { params: { email: valores.email, password: valores.password } })
       .then(response => {

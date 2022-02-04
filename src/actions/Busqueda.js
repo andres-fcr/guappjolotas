@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Foto, Precio, Producto, TProducto } from "../styles/ProductosStyles";
 import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
 import accounting from "accounting";
 import {Lilinput, ListProductos } from "../styles/BusquedaStyles";
-import { Linput, Div } from "../styles/LoginStyles";
+import {  Div } from "../styles/LoginStyles";
 import { Link } from 'react-router-dom';
 
 
@@ -15,7 +13,7 @@ function Busqueda() {
 
     const [produ, setProdu] = useState([]);
     const [tablaProductos, setTablaProductos] = useState([]);
-    // const [busqueda, setBusqueda] = useState("")
+    
 
 
 
@@ -31,11 +29,11 @@ function Busqueda() {
 
     const handleChange = ({target}) => {
         console.log(target.value);
-        // setBusqueda(target.value);
         filtrar(target.value);
     }
 
     const filtrar = (terminoBusqueda) => {
+
         // eslint-disable-next-line array-callback-return
         var resultadoBusqueda = tablaProductos.filter((elemento) => {
             if (elemento.product.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())

@@ -8,7 +8,6 @@ export const Div = styled.div`
     background-color: whitesmoke;
 }
 
-
 `
 
 

@@ -16,14 +16,7 @@ const Formulario = () => {
 
       .then(response => {
         console.log(response.data)
-        // Swal.fire({
-        //   icon: 'successs',
-        //   text: 'Te has registardo con éxito',
-        // }).then((result) => {
-        //   if (result.isConfirmed) {
-        //     window.location.href = "/"
-        //   }
-        // })
+        
       })
       .catch(error => console.log(error))
   }
@@ -40,14 +33,14 @@ const Formulario = () => {
 
           validate={(valores) => {
             let errores = {};
-            //validacion Nombre
+            
             if (!valores.nombre) {
               errores.nombre = ("Por favor ingresa un nombre");
             } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
               errores.nombre = "Escribe solo letras y espacio"
             }
 
-            //validacion correo
+            
             if (!valores.correo) {
               errores.correo = ("Por favor ingresa un correo electronico");
             } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)) {

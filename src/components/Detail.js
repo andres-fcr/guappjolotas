@@ -19,7 +19,7 @@ const Detail = ({ tarea }) => {
 
   const buscado = tarea.find((obj) => obj.id === Number(num));
 
-  const { product, imagen, precio } = buscado
+  const { precio } = buscado
 
   const info = tarea.filter(function (element) {
     return element.clase === buscado.clase;

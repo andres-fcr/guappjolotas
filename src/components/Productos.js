@@ -1,6 +1,5 @@
 import React, {  useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-// import { urlGuajolota } from '../helpers/Url';
 import { Foto, ListProducto, Precio, Producto, TProducto, Ul, Head, Busca, Texto } from "../styles/ProductosStyles"
 import accounting from 'accounting';
 import { Link } from 'react-router-dom';
