@@ -28,7 +28,7 @@ const Productos = ({ tarea }) => {
             </Head>
 
             <Texto>
-            <h1> Nada como una Guajolota para empezar el dia</h1>
+            <h1> Nada como una Guajolota para empezar el dia :D</h1>
             </Texto>
 
             <Busca>
