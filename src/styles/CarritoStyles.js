@@ -14,8 +14,8 @@ font-size: larger;
 `
 
 export const Foto  = styled.img`
-max-width: 20%;
-max-height: 20%;
+width: 20px;
+height: 20px;
 display: block;
 margin: auto;
 margin-top: 15%;
