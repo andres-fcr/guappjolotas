@@ -4,7 +4,7 @@ import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
 import { Beba, Boto, Cafe, Carro,  Contenido, Comi, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso} from '../styles/SliderStyles';
-// import Carrito from './Carrito'; 
+
 
 
 
