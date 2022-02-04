@@ -46,8 +46,9 @@ export const Button = styled.button`
     background-color: #FA4A0C;
     color: white;
     border-radius: 30px;
-    width: 312px;
+    width: 250px;
     height: 40px;
+    font-size: 15px;
  `
 
 export const Div = styled.div`
