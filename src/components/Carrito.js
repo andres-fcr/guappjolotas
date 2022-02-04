@@ -1,3 +1,52 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Boton, Carito, Foto, Titulo } from '../styles/CarritoStyles';
+import { Flecha } from '../styles/SliderStyles';
+
+const Carrito = () => {
+  return (
+  
+   <Carito>
+     <Titulo>Carrito</Titulo>
+     <Link to="/producto">
+        <Flecha
+          src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png"
+          alt="back"
+        />
+      </Link>
+       <Foto src='https://res.cloudinary.com/vrilli/image/upload/v1643945289/Group_66_ryfy86.png' alt=''/>
+
+     <Boton>Pagar</Boton>
+
+   </Carito>
+   
+   );
+};
+
+export default Carrito;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { render } from '@testing-library/react';
 // import accounting from 'accounting';
 // import React from 'react';
@@ -50,39 +99,39 @@
 
 //CREANDO EL CARRITO CON REACT
 
-import React, { useReducer } from 'react';
-import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
-import ProductItem from './ProductItem';
+// import React, { useReducer } from 'react';
+// import { carritoInicialState, carritoReducer } from '../reducers/CarritoReducer';
+// import ProductItem from './ProductItem';
 
-const Carrito = () => {
-    const [state, dispatch] = useReducer(carritoReducer, carritoInicialState);
+// const Carrito = () => {
+//     const [state, dispatch] = useReducer(carritoReducer, carritoInicialState);
 
-    const { produc, cart } = state;
+//     const { produc, cart } = state;
 
-    const addToCart = (id) => {
-        console.log(id);
-    };
+//     const addToCart = (id) => {
+//         console.log(id);
+//     };
 
-    const delFromCart = () => { };
+//     const delFromCart = () => { };
 
-    const clearCart = () => { };
+//     const clearCart = () => { };
 
-    return (
+//     return (
 
-        <div>
-            <h2>Carrito</h2>
-            <h3>Productos</h3>
-            <article className='box'>
-                {produc.map((product) => (
-                    <ProductItem key={product.id} data={product} addToCard={addToCart} />
-                ))}
-            </article>
-            <h3>Carrito</h3>
-            <article className='box'></article>
-        </div>
+//         <div>
+//             <h2>Carrito</h2>
+//             <h3>Productos</h3>
+//             <article className='box'>
+//                 {produc.map((product) => (
+//                     <ProductItem key={product.id} data={product} addToCard={addToCart} />
+//                 ))}
+//             </article>
+//             <h3>Carrito</h3>
+//             <article className='box'></article>
+//         </div>
 
-    );
-};
+//     );
+// };
 
-export default Carrito;
+// export default Carrito;
 

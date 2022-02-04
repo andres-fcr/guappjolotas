@@ -7,6 +7,7 @@ import Home from '../components/Home';
 import Login from '../components/Login';
 import Productos from '../components/Productos';
 import getData from '../helpers/getData';
+import Carrito from '../components/Carrito';
 
 const AppRouter = () => {
 
@@ -33,6 +34,7 @@ const AppRouter = () => {
           <Route path="/iniciarSesion" element={<Login />} />
           <Route path="/detalle/:id" element={<Detail tarea={tarea} />} />
           <Route path="/busqueda" element={<Busqueda tarea={tarea} />} />
+          <Route path="/carrito" element={<Carrito />} />
         </Routes>
       </BrowserRouter>
     </div>
