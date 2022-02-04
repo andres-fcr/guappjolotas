@@ -43,7 +43,6 @@ width: 60%;
 height: 60%;
 margin: auto;
 display: block;
-
 `
 
 export const Flecha = styled.img`

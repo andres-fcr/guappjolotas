@@ -24,7 +24,7 @@ const Counter = () => {
                 -
             </Button>
             <h1>{state.contador}</h1>
-            <Button variant="secondary" onClick={handleAdd} >
+            <Button variant="primar" onClick={handleAdd} >
                 +
             </Button>
         </Sumador>

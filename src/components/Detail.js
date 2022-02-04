@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Cafe, Carro,  Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso, Sumador } from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Contenido, Comi, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso} from '../styles/SliderStyles';
 // import Carrito from './Carrito'; 
 
 
@@ -92,12 +92,11 @@ const Detail = ({ tarea }) => {
       <div>
         <p>Selecciona la torta que más te guste y disfruta de tu desayuno</p>
 
-        <Carousel>
-        
+        <Contodo>
         {
           eat.map(x => (
-            <Card key={x.id} style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={x.imagen} />
+            <Card key={x.id} style={{ width: '13rem' }}>
+              <Comi variant="top" src={x.imagen} />
               <Card.Body>
                 <Card.Title>{x.name}</Card.Title>
                 <Card.Text>
@@ -107,7 +106,7 @@ const Detail = ({ tarea }) => {
             </Card>
           ))
         }
-        </Carousel>
+        </Contodo>
 
       </div>
     )
