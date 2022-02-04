@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Cafe, Carro, Contenido, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio } from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Contenido, Comi, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso} from '../styles/SliderStyles';
 // import Carrito from './Carrito'; 
 
 
@@ -59,47 +59,44 @@ const Detail = ({ tarea }) => {
     }
   }
 
-  // const quitar = (id) => {
-  //     const indice = productos.findIndex(p => p.id === id);
-  //     if (indice !== -1) {
-  //         productos.splice(indice, 1);
-  //         guardar();
-  //     }
-  // }
+ 
 
 
-  function Bebida() {
-    return (
-      <div>
-        <p>Selecciona la bebida que más te guste y disfruta de tu desayuno.</p>
-        <Contodo>
-          {
-            drink.map(x => (
-              <Cafe key={x.id} style={{ width: '10rem' }}>
-                <Beba variant="top" src={x.imagen} />
-                <Card.Body>
-                  <Card.Title>{x.name}</Card.Title>
-                  <Card.Text>
-                    {accounting.formatMoney(x.precio, "MXN")}
-                  </Card.Text>
-                </Card.Body>
-              </Cafe>
-            ))
-          }
-        </Contodo>
-      </div>
-    )
-  }
+    function Bebida() {
+        return (
+            <div>
+                <p>Selecciona la bebida que más te guste y disfruta de tu desayuno.</p>
+                <Contodo>
+                    {
+                        drink.map(x => (
+                                <Cafe key={x.id} style={{ width: '10rem' }}>
+                                    <Beba variant="top" src={x.imagen} />
+                                    <Card.Body>
+                                        <Card.Title>{x.name}</Card.Title>
+                                        <Card.Text>
+                                            {accounting.formatMoney(x.precio, "MXN")}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Cafe>
+                        ))
+                    }
+                </Contodo>
+            </div>
+        )
+    }
+   
+  
 
   function Comida() {
     return (
       <div>
         <p>Selecciona la torta que más te guste y disfruta de tu desayuno</p>
 
+        <Contodo>
         {
           eat.map(x => (
-            <Card key={x.id} style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={x.imagen} />
+            <Card key={x.id} style={{ width: '13rem' }}>
+              <Comi variant="top" src={x.imagen} />
               <Card.Body>
                 <Card.Title>{x.name}</Card.Title>
                 <Card.Text>
@@ -109,13 +106,14 @@ const Detail = ({ tarea }) => {
             </Card>
           ))
         }
+        </Contodo>
 
       </div>
     )
   }
 
-  return (
-   <Card>
+   return (
+    <Card>
     <div>
       <Link to="/producto">
         <Flecha
@@ -144,44 +142,41 @@ const Detail = ({ tarea }) => {
                 <Prepio>{cs.precio}</Prepio>
               </Carousel.Caption>
             </Carousel.Item>
-
-          ))
+        ))
         }
       </Carousel>
 
 
-
-      {/* <Coma src={imagen} alt="product" />
-        <h1>{product}</h1>
-        <h4>{accounting.formatMoney(precio, "MXN")}</h4> */}
-      <Counter />
-      <h3>Sabor</h3>
-      <Contenido>
-        {iconos.map((i) => (
-          <div key={i.id}>
-            <Link to={`/detalle/${i.clase}${i.id}`}>
-              <Foto src={i.icono} alt={i.product} />
-            </Link>
-          </div>
-        ))}
-      </Contenido>
-      <h3>Guajolocombo</h3>
-      {withNoDigits === "Tamales" ? (
-        <Bebida />
-      ) : withNoDigits === "Guajalotes" ? (
-        <Bebida />
-      ) : (
-        <Comida />
-      )}
-
-      <br /><br />
-      <Boto onClick={() => agregar()}>
-        Agregar al carrito {accounting.formatMoney(precio, "MXN")}
-      </Boto>
-
-    </div>
-   </Card>
-  );
+        <Counter />
+       
+        
+        <Sabroso>Sabor</Sabroso>
+        <Contenido>
+          {iconos.map((i) => (
+            <div key={i.id}>
+              <Link to={`/detalle/${i.clase}${i.id}`}>
+                <Foto src={i.icono} alt={i.product} />
+              </Link>
+            </div>
+          ))}
+        </Contenido>
+        <h3>Guajolocombo</h3>
+        {withNoDigits === "Tamales" ? (
+          <Bebida />
+        ) : withNoDigits === "Guajalotes" ? (
+          <Bebida />
+        ) : (
+          <Comida />
+        )}
+        
+       <br /><br />
+          <Boto onClick={() => agregar()}>
+            Agregar al carrito {accounting.formatMoney(precio, "MXN")}
+          </Boto>
+    
+      </div>
+      </Card>
+    );
 };
 
 export default Detail;

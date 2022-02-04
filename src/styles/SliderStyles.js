@@ -24,10 +24,7 @@ margin: 0px 52px;
 `
 
 export const Cafe = styled(Card)`
-/* margin-top: 50%; */
-float: left;
-margin-right: 20px;
-position: relative;
+margin: 20px, 20px, 20px, 20px;
 top: 0;
 left: 0;
 border: 1px, red solid;
@@ -37,6 +34,15 @@ border: 1px, red solid;
 export const Beba = styled(Card.Img)`
 align-items: center;
 border-radius: 20px;
+`
+
+export const Comi = styled.img`
+align-items: center;
+border-radius: 50px;
+width: 60%;
+height: 60%;
+margin: auto;
+display: block;
 `
 
 export const Flecha = styled.img`
@@ -56,6 +62,7 @@ left: 80px;
 `
 
 export const Boto = styled.button`
+ border: none;
  background-color: #FA4A0C;
  border-radius: 20px;
  text-align: center;
@@ -63,15 +70,21 @@ export const Boto = styled.button`
  width: 290px;
  height: 40px;
  margin-left: 40%;
- border: none;
-  color: white;
+ margin-bottom:20px ;
+ margin-top:20px;
  `
 
+export const Sabroso = styled.h3`
+margin-top: 10%;
 
+`
 
 export const Contenido = styled.div`
-display: flex;
-align-items: flex-start;
+display: grid;
+grid-template-columns: repeat(auto-fill, 200px);
+gap: 40px;
+padding: 40px;
+justify-content: center;
 
 `
 
@@ -99,10 +112,29 @@ font-weight: bold;
 font-size: larger;
 `
 
+export const Sumador = styled.div`
+display: flex;
+align-items: center;
+color: black;
+position: absolute;
+left: 45%;
+right: 45%;
+margin: 0;
+` 
+
 export const Fotografias = styled.img` 
 max-width: 30%;
 max-height: 30%;
 display: block;
 margin: auto;
-
 `
+
+
+
+
+
+
+
+
+
+
