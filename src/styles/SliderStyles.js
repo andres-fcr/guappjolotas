@@ -76,7 +76,15 @@ export const Boto = styled.button`
 
 export const Sabroso = styled.h3`
 margin-top: 10%;
+font-weight: bold;
+font-size: larger;
+`
 
+export const  Combo = styled.h3`
+margin-top: 10%;
+font-weight: bold;
+font-size: larger;
+margin-top: 25px;
 `
 
 export const Contenido = styled.div`
@@ -99,7 +107,6 @@ justify-content: center;
 
 export const Nombre = styled.h3`
 color: black;
-font-family: 'Times New Roman', Times, serif;
 font-weight: bold;
 font-size: larger;
 `
@@ -107,7 +114,6 @@ font-size: larger;
 
 export const Prepio = styled.p`
 color: black;
-font-family: 'Times New Roman', Times, serif;
 font-weight: bold;
 font-size: larger;
 `
@@ -120,14 +126,28 @@ position: absolute;
 left: 45%;
 right: 45%;
 margin: 0;
+margin-top: 1%;
 ` 
 
 export const Fotografias = styled.img` 
-max-width: 30%;
-max-height: 30%;
+max-width: 20%;
+max-height: 20%;
 display: block;
 margin: auto;
 `
+
+export const Contenga = styled.div`
+margin-top: 6%;
+`
+
+
+export  const Contenidito = styled.div`
+margin-top: 150px;
+
+`
+
+
+
 
 
 

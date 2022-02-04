@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Carousel } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Counter from '../actions/Counter';
-import { Beba, Boto, Cafe, Carro,  Contenido, Comi, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso} from '../styles/SliderStyles';
+import { Beba, Boto, Cafe, Carro,  Contenido, Comi, Contodo, Flecha, Foto, Fotografias, Nombre, Prepio, Sabroso, Combo, Contenga, Contenidito} from '../styles/SliderStyles';
 
 
 
@@ -130,21 +130,24 @@ const Detail = ({ tarea }) => {
       <br /> <br />
       <br /> <br />
 
-
+      <Contenga>
       <Carousel>
         {
           info.map((cs) => (
 
             <Carousel.Item key={cs.id}>
-              <Fotografias className="d-block w-100" src={cs.imagen} width="3500%" height="350px" alt="" /><br /> <br /><br /> <br /><br /> <br />
+              <Fotografias className="d-block w-100" src={cs.imagen} width="2300%" height="230%" alt="" />
+              <Contenidito>
               <Carousel.Caption>
                 <Nombre>{cs.product}</Nombre>
                 <Prepio>{cs.precio}</Prepio>
               </Carousel.Caption>
+              </Contenidito>
             </Carousel.Item>
         ))
         }
       </Carousel>
+      </Contenga>
 
 
         <Counter />
@@ -160,7 +163,7 @@ const Detail = ({ tarea }) => {
             </div>
           ))}
         </Contenido>
-        <h3>Guajolocombo</h3>
+        <Combo>Guajolocombo</Combo>
         {withNoDigits === "Tamales" ? (
           <Bebida />
         ) : withNoDigits === "Guajalotes" ? (
