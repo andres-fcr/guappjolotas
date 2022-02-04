@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Boton, Carito, Foto, Titulo } from '../styles/CarritoStyles';
+import { Carro, Boton, Carito, Foto, Titulo } from '../styles/CarritoStyles';
 import { Flecha } from '../styles/SliderStyles';
 
 const Carrito = () => {
   return (
   
    <Carito>
-     <Titulo>Carrito</Titulo>
+     <Titulo> <p>Carrito</p> </Titulo>
      <Link to="/producto">
         <Flecha
           src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1643496365/guappjolotas/Vector_a8gtlb.png"
           alt="back"
         />
       </Link>
-       <Foto src='https://res.cloudinary.com/vrilli/image/upload/v1643945289/Group_66_ryfy86.png' alt=''/>
 
+      <Carro>
+       <Foto src='https://res.cloudinary.com/vrilli/image/upload/v1643945289/Group_66_ryfy86.png' alt=''/>
+       </Carro>
      <Boton>Pagar</Boton>
 
    </Carito>
