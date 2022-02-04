@@ -4,10 +4,6 @@ import { contadorInitalState, contadorReducer } from '../reducers/contadorReduce
 import { Sumador } from '../styles/SliderStyles';
 import { TYPES } from './contadorActions';
 
-
-
-
-
 const Counter = () => {
 
     const [state, dispatch] = useReducer(contadorReducer, contadorInitalState);
