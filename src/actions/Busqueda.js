@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Foto, Link, ListProducto, Precio, Producto, TProducto } from "../styles/ProductosStyles";
+import { Foto, Link, Precio, Producto, TProducto } from "../styles/ProductosStyles";
 import { urlGuajolota } from "../helpers/Url";
 import { Card } from "react-bootstrap";
 import accounting from "accounting";
