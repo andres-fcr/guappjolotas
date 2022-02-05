@@ -2,9 +2,13 @@ import React from 'react';
 import { Formik } from 'formik';
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Button, Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import { Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Login = () => {
+
+  const navigate = useNavigate()
 
   const iniciarSesion = (valores) => {
     axios.get(urlUser, { params: { email: valores.email, password: valores.password } })
@@ -12,8 +16,9 @@ const Login = () => {
         console.log(response.data.length);
         if (response.data.length > 0) {
           alert("se ha iniciado sesion")
+          navigate('/producto')
         } else {
-          alert("nope")
+          alert("Ususario o contraseña incorrectos")
         }
       })
       .catch(error => {
@@ -66,7 +71,9 @@ const Login = () => {
               />
             </Contrasenana>
 
-            <Button type='submit' >Iniciar Sesión</Button>
+            <Button type='submit' className='mb-2'>Iniciar Sesión</Button>
+            <p className='mb-2'>O...</p>
+            <Button type='button' as={Link} to="/crearCuenta" variant="primar">Registrate</Button>
           </Div>
         </form>
       )}

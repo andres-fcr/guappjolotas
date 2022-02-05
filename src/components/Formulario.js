@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Button, Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import {  Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -108,8 +110,9 @@ const Formulario = () => {
                   />
                 </Contrasenana>
 
-                <Button type='submit'>Crear Cuenta</Button>
-                {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
+                <Button type='submit'className='mb-2'>Crear Cuenta</Button>
+                <Button type='button' as={Link} to="/iniciarSesion" variant="primar">Iniciar sesión</Button>
+                {cuentaCreada && <p className="exito">Cuenta Creada con Éxito! Ya puedes iniciar sesión</p>}
 
             </Div>
               </form>
