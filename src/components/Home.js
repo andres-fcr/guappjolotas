@@ -12,7 +12,6 @@ const Home = () => {
             <Botones>
                 <Iniciar> <Link to="/iniciarSesion"><Button variant="primary">Iniciar Sesion</Button>{' '}</Link> <br></br> </Iniciar>
                 <Iniciar> <Link to="/crearCuenta"><Button variant="primar">Crear Cuenta</Button>{' '}</Link><br></br></Iniciar>
-                <Iniciar><Link to="/producto"><Button variant="outline-primary">Productos</Button>{' '}</Link><br></br></Iniciar>
             </Botones>
         </Centrar>
 
