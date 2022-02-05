@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate()
 
   const iniciarSesion = (valores) => {
-    axios.get(urlUser, { params: { email: valores.correo, password: valores.contrasena } })
+    axios.get(urlUser, { params: { email: valores.email, password: valores.password } })
       .then(response => {
         console.log(response.data);
         if (response.data.length > 0) {
@@ -29,8 +29,8 @@ const Login = () => {
   return (<>
     <Formik
       initialValues={{
-        correo: '',
-        contrasena: '',
+        email: '',
+        password: '',
       }}
       onSubmit={(valores) => {
         console.log(valores);
@@ -48,26 +48,26 @@ const Login = () => {
             </Inicio>
 
             <Correo>
-              <label htmlFor='correo'></label>
+              <label htmlFor='email'></label>
               <Linput
                 type="email"
-                id='correo'
-                name='correo'
+                id='email'
+                name='email'
                 placeholder="Introduce tu correo"
-                value={values.correo}
+                value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
             </Correo>
 
             <Contrasenana>
-              <label htmlFor='contrasena'></label>
+              <label htmlFor='password'></label>
               <Cinput
                 type="password"
-                id='contrasena'
-                name='contrasena'
+                id='password'
+                name='password'
                 placeholder='Contraseña'
-                value={values.contrasena}
+                value={values.password}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
