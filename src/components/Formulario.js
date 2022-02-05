@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
 import { Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 
