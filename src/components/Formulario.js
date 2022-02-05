@@ -28,7 +28,7 @@ const Formulario = () => {
       <div className='Container'>
         <Formik
           initialValues={{
-            // name: '',
+            name: '',
             email: '',
             password: ''
           }}
@@ -36,11 +36,11 @@ const Formulario = () => {
           validate={(valores) => {
             let errores = {};
 
-            // if (!valores.name) {
-            //   errores.name = ("Por favor ingresa un nombre");
-            // } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.name)) {
-            //   errores.name = "Escribe solo letras y espacio"
-            // }
+            if (!valores.name) {
+              errores.name = ("Por favor ingresa un nombre");
+            } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.name)) {
+              errores.name = "Escribe solo letras y espacio"
+            }
 
 
             if (!valores.email) {
@@ -71,7 +71,7 @@ const Formulario = () => {
                 </Link>
 
                 <Inicio><h1>Registrate.</h1></Inicio>
-                {/* <Correo>
+                <Correo>
                   <label htmlFor='name'></label>
                   <Linput
                     type="text"
@@ -83,7 +83,7 @@ const Formulario = () => {
                     onBlur={handleBlur}
                   />
                   {errors.name && <div className='erro'>{errors.name}</div>}
-                </Correo> */}
+                </Correo>
 
                 <Contrasenana>
                   <label htmlFor='email' />
