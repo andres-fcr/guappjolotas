@@ -30,7 +30,7 @@ const Login = () => {
 			<Formik
 				initialValues={{
 					email: "andres@gmail.com",
-					password: 1234
+					password: 123
 				}}
 				onSubmit={(valores) => {
 					console.log(valores);
